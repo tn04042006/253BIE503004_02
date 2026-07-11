@@ -1,0 +1,308 @@
+:root {
+    --primary-blue: #000181;
+    --text-gray: rgba(116, 116, 128, 0.89);
+    --error-red: #CB0000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #D0FFA4 0%, #96E7FF 40%, #E8A0E8 70%, #D0FFA4 100%);
+    color: var(--primary-blue);
+    line-height: 1.5;
+}
+
+
+/* Typography */
+.title-blue {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 40px 0 40px;
+    text-align: center;
+
+}
+
+/* Profile Section */
+.profile-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(0, 1, 129, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-big {
+    width: 90px;
+    height: 90px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.handle {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 650px; /* Tỷ lệ vàng cho form hồ sơ */
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+}
+
+.input-row label {
+    color: var(--text-gray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text-black {
+    color: #000;
+    font-size: 15px;
+}
+
+.btn-setup {
+    color: var(--error-red);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-save {
+    margin-top: 30px;
+    background: #FFF;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 12px 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-save:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* History Section */
+.group-label {
+    font-size: 18px;
+    margin: 40px 0 20px;
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 15px;
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột cân xứng */
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--primary-blue);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.product-box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin: 5px 0 0;
+}
+
+.product-price-qty {
+    margin-left: auto;
+    text-align: right;
+}
+
+.product-price-qty .price {
+    display: block;
+    color: var(--error-red);
+    font-weight: 600;
+}
+
+.billing-details {
+    border-top: 1px dashed rgba(0, 1, 129, 0.3);
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.total {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn-outline-red {
+    border: 1px solid var(--primary-blue);
+    background: #FFF;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Review Section */
+.review-card {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--primary-blue);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.user-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.avatar-small {
+    width: 35px;
+    height: 35px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.stars {
+    color: #E8A0E8;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.review-imgs {
+    display: flex;
+    gap: 10px;
+}
+
+.review-imgs img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-blue);
+}
+
+/* Ô dòng chung */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3); /* Nền mờ nhẹ như Figma */
+    border: 1px solid #000181;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    min-height: 50px;
+}
+
+/* Xóa sạch style mặc định của ô Input */
+.input-field, .input-inline {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-align: right;
+    width: 100%;
+}
+
+/* Riêng ô input-field (Họ, Tên...) */
+.input-field {
+    cursor: text;
+}
+
+/* Chữ đỏ Thiết lập ngay */
+.btn-setup {
+    color: #CB0000;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Ô nhập liệu hiện ra sau khi bấm */
+.input-inline {
+    width: auto;
+    min-width: 150px;
+}
+
+/* Lớp để ẩn phần tử */
+.hidden {
+    display: none !important;
+}
+
+/* Xóa cái đốm hồng lạ nếu nó do icon lỗi */
+.input-row::before, .input-row::after {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+}

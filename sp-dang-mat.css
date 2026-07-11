@@ -1,0 +1,42 @@
+/* --- 1. SETUP NỀN & FONT --- */
+.face-page {
+    background: linear-gradient(180deg, #E8A0E8 11.54%, #DAD7C1 25%, #E0C1D1 39.9%, #E8A0E8 51.92%, #E1BCD4 66.83%, #DAD7C1 83.17%, #E8A0E8 93.75%);
+    color: #000181;
+}
+
+
+/* --- 2. PHẦN GIỚI THIỆU DÁNG MẶT --- */
+.face-guide-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px dashed #000181;
+}
+
+.face-text-content {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000181;
+}
+
+.face-item-info {
+    margin-bottom: 12px;
+}
+
+.face-item-info strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.face-image-guide {
+    flex: 1;
+}
+
+.face-image-guide img {
+    width: 100%;
+    border-radius: 10px;
+}

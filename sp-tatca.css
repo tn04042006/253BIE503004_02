@@ -1,0 +1,94 @@
+/* BACKGROUND TOÀN TRANG: Xanh lá -> Tím nhạt */
+.all-products-page {
+    background: linear-gradient(180deg, #D0FFA4 0%, #E1B6D4 100%);
+    min-height: 100vh;
+    overflow-x: hidden; /* Chặn hoàn toàn cuộn ngang của body */
+    display: flex;
+    flex-direction: column;
+}
+
+/* BỐ CỤC SHOP LAYOUT */
+.shop-layout {
+    display: flex;
+    gap: 30px; 
+    margin-top: 40px;
+    align-items: flex-start;
+    width: 100%; /* Đảm bảo không rộng hơn container */
+}
+
+/* SIDEBAR: Cố định độ rộng */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0; /* Không cho phép sidebar bị bóp nhỏ */
+}
+
+/* NỘI DUNG CHÍNH (Banner + Grid) */
+.main-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0; /* QUAN TRỌNG: Giúp flex-item không bị tràn viền */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* BANNER: Luôn vừa vặn khung hình */
+.product-hero-banner {
+    width: 100%;
+    line-height: 0; /* Khử khoảng trắng thừa dưới ảnh */
+}
+
+.product-hero-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* LƯỚI SẢN PHẨM: Tối ưu 4 cột */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    width: 100%;
+}
+
+/* ĐIỀU CHỈNH SIDEBAR BOX */
+.all-products-page .filter-group {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid #000181;
+    backdrop-filter: blur(5px);
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Chống tràn trên các màn hình nhỏ hơn)
+   ========================================================================== */
+
+/* Màn hình laptop nhỏ (dưới 1200px): Chuyển xuống 3 cột để không bị chật */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Màn hình Tablet (dưới 992px): Chuyển xuống 2 cột */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Màn hình Mobile (dưới 768px): Sidebar nhảy lên trên, lưới 2 cột */
+@media (max-width: 768px) {
+    .shop-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}

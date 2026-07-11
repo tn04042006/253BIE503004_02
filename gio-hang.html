@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gio-hang.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+
+
+</head>
+<body class="cart-page-wrapper">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+    <main >
+        <div class="cart-container">
+            
+            <div class="cart-header-row">
+                <div class="col-check">
+                    <input type="checkbox" id="check-all-top">
+                </div>
+                <div class="col-product-title">Sản phẩm</div>
+                <div class="col-tag">Thẻ</div>
+                <div class="col-price">Đơn giá</div>
+                <div class="col-quantity">Số lượng</div>
+                <div class="col-subtotal">Số tiền</div>
+                <div class="col-action">Thao tác</div>
+            </div>
+
+            <div class="cart-items-list"></div>
+
+            <div class="cart-footer-summary">
+                <div class="summary-top-row">
+                    <div class="summary-left">
+                        <input type="checkbox" id="check-all-bottom">
+                        <label for="check-all-bottom">Chọn tất cả (3)</label>
+                        <button class="btn-clear-all">Xóa</button>
+                    </div>
+                    <div class="summary-right">
+                        <span class="voucher-label">Voucher:</span>
+                        <a href="#" class="voucher-link">Chọn hoặc nhập mã</a>
+                    </div>
+                </div>
+
+                <div class="summary-divider">=</div>
+
+                <div class="summary-bottom-row">
+                    <div class="total-price-block">
+                        <span class="total-label">Tổng cộng (0 sản phẩm) :</span>
+                        <span class="total-amount">0đ</span>
+                    </div>
+                    <button class="btn-submit-cart">Mua ngay</button>                
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-grid container">
+            <!-- HÀNG 1 -->
+            <div class="footer-column partners">
+                <h3>Các đối tác</h3>
+                <div class="partner-logos">
+                    <img src="images/cd.svg" alt="Dior">
+                    <img src="images/prada.svg" alt="Prada">
+                    <img src="images/crh.svg" alt="Chrome Hearts">
+                    <img src="images/gmt.svg" alt="Gentle Monster">
+                    <img src="images/rayban.svg" alt="Rayban">
+                    <img src="images/persol.svg" alt="Persol">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hotline</h3>
+                <p>1900 1999</p>
+                <p>(9:00 - 22:00)</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Email</h3>
+                <p>hello@matmoeyewear.com</p>
+            </div>
+
+            <!-- HÀNG 2 -->
+            <div class="footer-column introduction">
+                <h3>Giới thiệu</h3>
+                <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+            </div>
+
+            <div class="footer-column policies">
+                <h3>Chính sách</h3>
+                <ul class="policy-links">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- HÀNG CUỐI -->
+            <div class="footer-bottom">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+   
+    <div id="voucherModal" class="voucher-modal">
+        <div class="voucher-modal-content">
+            <div class="voucher-modal-header">
+                <h3>Chọn Mắt Mơ Voucher</h3>
+                <button class="btn-close-voucher" onclick="closeVoucherModal()">&times;</button>
+            </div>
+            
+            <div class="voucher-modal-body">
+                <div class="voucher-input-wrapper">
+                    <input type="text" id="voucherCodeInput" placeholder="Nhập mã giảm giá của bạn...">
+                    <button class="btn-apply-code" onclick="applyTypedVoucher()">Áp dụng</button>
+                </div>
+                
+                <p class="voucher-section-title">Mã giảm giá có sẵn dành cho bạn:</p>
+                
+                <div class="voucher-list">
+                    <div class="voucher-item-card" onclick="selectVoucher(20, 'MATMO20')">
+                        <img src="images/voucher.png" alt="Voucher 20%" class="voucher-img-thumb">
+                        <div class="voucher-item-info">
+                            <span class="v-code">MATMO20</span>
+                            <span class="v-desc">Giảm ngay 20% tổng hóa đơn</span>
+                        </div>
+                    </div>
+                    
+                    <div class="voucher-item-card" onclick="selectVoucher(50, 'MATMO50')">
+                        <img src="images/voucher50.png" alt="Voucher 50%" class="voucher-img-thumb">
+                        <div class="voucher-item-info">
+                            <span class="v-code">MATMO50</span>
+                            <span class="v-desc">Giảm siêu cấp 50% tổng hóa đơn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Biến toàn cục để lưu voucher đang được áp dụng
+        let currentDiscountPercent = 0; 
+        let currentVoucherCode = "";
+
+        // 1. Hàm lấy dữ liệu từ localStorage và hiển thị ra giao diện
+        function renderCartPage() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsList = document.querySelector('.cart-items-list');
+            const totalAmountLabel = document.querySelector('.total-amount');
+            const totalLabel = document.querySelector('.total-label');
+            const checkAllBottomLabel = document.querySelector('label[for="check-all-bottom"]');
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = `
+                    <div style="text-align: center; padding: 40px; font-size: 18px; color: #666;">
+                        Giỏ hàng của bạn đang trống. <a href="sp-tat-ca.html" style="color: #007bff; text-decoration: underline;">Mua sắm ngay!</a>
+                    </div>
+                `;
+                totalAmountLabel.innerText = "0đ";
+                totalLabel.innerText = "Tổng cộng (0 sản phẩm) :";
+                if(checkAllBottomLabel) checkAllBottomLabel.innerText = "Chọn tất cả (0)";
+                
+                const checkAllBtn = document.getElementById('check-all-bottom');
+                if (checkAllBtn) checkAllBtn.checked = false;
+                return;
+            }
+
+            const cartHTML = cart.map((item, index) => {
+                const itemSubtotal = item.price * item.quantity;
+                
+                let currentTag = 'Kính mắt';
+                if (item.name) {
+                    const nameLowerCase = item.name.trim().toLowerCase();
+                    if (nameLowerCase.startsWith('tròng')) {
+                        currentTag = 'Tròng kính';
+                    } else if (nameLowerCase.startsWith('kính') || nameLowerCase.startsWith('gọng')) {
+                        currentTag = 'Kính mắt';
+                    }
+                }
+
+                return `
+                    <div class="cart-item-group" data-id="${item.id}" data-tag="${currentTag}">
+                        <div class="cart-item-main">
+                            <div class="col-check">
+                                <input type="checkbox" class="item-checkbox" checked onchange="updateTotalMoney()">
+                            </div>
+                            <div class="col-product-info">
+                                <img src="${item.img}" alt="${item.name}" class="product-img">
+                                <span class="product-name">${item.name}</span>
+                            </div>
+                            <div class="col-tag"><span class="tag-label">${currentTag}</span></div>
+                            <div class="col-price">${item.price.toLocaleString()}đ</div>
+                            <div class="col-quantity">
+                                <div class="quantity-input-box">
+                                    <button class="btn-minus" onclick="updateQuantity('${item.id}', -1)">-</button>
+                                    <input type="text" value="${item.quantity}" readonly>
+                                    <button class="btn-plus" onclick="updateQuantity('${item.id}', 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="col-subtotal">${itemSubtotal.toLocaleString()}đ</div>
+                            <div class="col-action">
+                                <button class="btn-delete-item" onclick="removeItem('${item.id}')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 6L6 18M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            cartItemsList.innerHTML = cartHTML;
+            updateTotalMoney();
+        }
+
+        // 2. Hàm tính lại tổng tiền (Đã tích hợp giảm giá Voucher)
+        function updateTotalMoney() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemGroups = document.querySelectorAll('.cart-item-group');
+            const checkAllBtn = document.getElementById('check-all-bottom');
+            const checkAllBottomLabel = document.querySelector('label[for="check-all-bottom"]');
+            
+            let totalCheckedPrice = 0;
+            let totalCheckedQuantity = 0;
+            let totalCheckedItemsCount = 0;
+
+            itemGroups.forEach(group => {
+                const id = group.getAttribute('data-id');
+                const checkbox = group.querySelector('.item-checkbox');
+                const product = cart.find(item => item.id === id);
+
+                if (checkbox && checkbox.checked && product) {
+                    totalCheckedPrice += product.price * product.quantity;
+                    totalCheckedQuantity += product.quantity;
+                    totalCheckedItemsCount++;
+                }
+            });
+
+            // Tính toán số tiền được giảm theo phần trăm
+            let discountAmount = (totalCheckedPrice * currentDiscountPercent) / 100;
+            let finalPrice = totalCheckedPrice - discountAmount;
+
+            // Hiển thị ra màn hình tổng cộng sau giảm giá
+            if (currentDiscountPercent > 0) {
+                document.querySelector('.total-amount').innerHTML = `
+                    <span style="font-size:14px; text-decoration:line-through; color:#aaa; margin-right:8px;">${totalCheckedPrice.toLocaleString()}đ</span>
+                    <span>${finalPrice.toLocaleString()}đ</span>
+                    <div style="font-size:12px; color:#ff4d4f; text-align:right;">(Đã giảm ${currentDiscountPercent}% từ mã ${currentVoucherCode})</div>
+                `;
+            } else {
+                document.querySelector('.total-amount').innerText = totalCheckedPrice.toLocaleString() + "đ";
+            }
+
+            document.querySelector('.total-label').innerText = `Tổng cộng (${totalCheckedQuantity} sản phẩm) :`;
+            if(checkAllBottomLabel) checkAllBottomLabel.innerText = `Chọn tất cả (${cart.length})`;
+
+            if (checkAllBtn && itemGroups.length > 0) {
+                checkAllBtn.checked = (totalCheckedItemsCount === itemGroups.length);
+            }
+        }
+
+        // 3. Hàm tăng/giảm số lượng sản phẩm
+        function updateQuantity(id, change) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const product = cart.find(item => item.id === id);
+
+            if (product) {
+                product.quantity += change;
+                if (product.quantity < 1) {
+                    cart = cart.filter(item => item.id !== id);
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCartPage();
+            }
+        }
+
+        // 4. Hàm xóa một sản phẩm ra khỏi giỏ hàng
+        function removeItem(id) {
+            if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?")) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.id !== id);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCartPage();
+            }
+        }
+
+        // ================= CÁC HÀM XỬ LÝ POPUP VOUCHER =================
+        function openVoucherModal() {
+            document.getElementById('voucherModal').style.display = 'flex';
+        }
+
+        function closeVoucherModal() {
+            document.getElementById('voucherModal').style.display = 'none';
+        }
+
+        // Khi khách click trực tiếp chọn các tấm ảnh voucher có sẵn
+        function selectVoucher(percent, code) {
+        currentDiscountPercent = percent;
+        currentVoucherCode = code;
+        
+        // ĐỔI CHỮ TEXT LINK Ở GIỎ HÀNG THÀNH TÊN MÃ ĐÃ CHỌN
+        document.querySelector('.voucher-link').innerText = `Mã: ${code} (-${percent}%)`;
+        
+        // LƯU THÊM DÒNG NÀY ĐỂ TRANG THANH TOÁN ĐỌC ĐƯỢC
+        localStorage.setItem('appliedVoucher', JSON.stringify({ percent: percent, code: code }));
+        
+        updateTotalMoney();
+        closeVoucherModal();
+        alert(`Áp dụng mã ${code} giảm giá ${percent}% thành công!`);
+    }
+            // Khi khách tự gõ bằng chữ hoặc số vào ô Input text
+        function applyTypedVoucher() {
+            const userInput = document.getElementById('voucherCodeInput').value.trim().toUpperCase();
+            
+            if (userInput === "") {
+                alert("Vui lòng nhập mã giảm giá!");
+                return;
+            }
+
+            // Logic kiểm tra mã tự đặt tùy bạn cấu hình (Ví dụ ở đây hỗ trợ các mã MATMO)
+            if (userInput === "MATMO10" || userInput === "10") {
+                selectVoucher(10, "MATMO10");
+            } else if (userInput === "MATMO20" || userInput === "20") {
+                selectVoucher(20, "MATMO20");
+            } else if (userInput === "MATMO50" || userInput === "50") {
+                selectVoucher(50, "MATMO50");
+            } else {
+                alert("Mã giảm giá không hợp lệ hoặc đã hết hạn!");
+            }
+        }
+
+        // Đóng modal khi bấm trượt ra vùng ngoài màu đen
+        window.onclick = function(event) {
+            const modal = document.getElementById('voucherModal');
+            if (event.target == modal) {
+                closeVoucherModal();
+            }
+        }
+
+        // ================= XỬ LÝ SỰ KIỆN CLICK (DOMContentLoaded) =================
+        document.addEventListener("DOMContentLoaded", function () {
+            renderCartPage();
+
+            // Gán sự kiện click vào chữ "Chọn hoặc nhập mã" để mở Popup lên
+            const voucherLink = document.querySelector('.voucher-link');
+            if (voucherLink) {
+                voucherLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openVoucherModal();
+                });
+            }
+
+            const checkAllBtn = document.getElementById('check-all-bottom');
+            if (checkAllBtn) {
+                checkAllBtn.addEventListener('change', function() {
+                    const checkboxes = document.querySelectorAll('.item-checkbox');
+                    checkboxes.forEach(cb => {
+                        cb.checked = this.checked;
+                    });
+                    updateTotalMoney();
+                });
+            }
+
+            const clearAllBtn = document.querySelector('.btn-clear-all');
+            if (clearAllBtn) {
+                clearAllBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    if (cart.length === 0) {
+                        alert("Giỏ hàng của bạn đã trống sẵn rồi!");
+                        return;
+                    }
+                    if (confirm("Bạn có chắc chắn muốn xóa toàn bộ sản phẩm trong giỏ hàng không?")) {
+                        localStorage.removeItem('cart');
+                        renderCartPage();
+                    }
+                });
+            }
+
+            const submitCartBtn = document.querySelector('.btn-submit-cart');
+            if (submitCartBtn) {
+                submitCartBtn.addEventListener('click', () => {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    if (cart.length === 0) {
+                        alert('Giỏ hàng của bạn đang trống, không thể thanh toán!');
+                        return;
+                    }
+                    
+                    const checkedBoxes = document.querySelectorAll('.item-checkbox:checked');
+                    if (checkedBoxes.length === 0) {
+                        alert('Vui lòng chọn ít nhất một sản phẩm để tiến hành thanh toán!');
+                        return;
+                    }
+
+                    let coTrongKinh = false;
+                    let coKinhMat = false;
+
+                    const itemGroups = document.querySelectorAll('.cart-item-group');
+                    itemGroups.forEach(group => {
+                        const checkbox = group.querySelector('.item-checkbox');
+                        if (checkbox && checkbox.checked) {
+                            const tagType = group.getAttribute('data-tag');
+                            if (tagType === 'Tròng kính') coTrongKinh = true;
+                            if (tagType === 'Kính mắt') coKinhMat = true;
+                        }
+                    });
+
+                    if (coTrongKinh && !coKinhMat) {
+                        alert('Tiệm chỉ bán tròng kèm kính! Vui lòng chọn thêm sản phẩm Kính mắt/Gọng kính để thanh toán.');
+                        return;
+                    }
+
+                    window.location.href = 'thanh-toan.html';
+                });
+            }
+        });
+    </script>
+    <script src="js/dang-nhap-dang-ky.js"></script>
+    <script src="js/chatbox.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ người dùng - Optimized</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/trang-ca-nhan.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="profile-card">
+            <h2 class="title-blue">Xem hồ sơ</h2>
+            
+            <div class="profile-header">
+                <div class="avatar-big">Q</div>
+                <p class="handle">@quynh_fiona_07</p>
+            </div>
+
+            <div class="form-container">
+                <div class="input-row">
+                    <label>Họ</label>
+                    <input type="text" class="input-field" value="Nguyễn">
+                </div>
+                <div class="input-row">
+                    <label>Tên</label>
+                    <input type="text" class="input-field" value="Như Quỳnh">
+                </div>
+                <div class="input-row">
+                    <label>Tên người dùng</label>
+                    <input type="text" class="input-field" value="quynh_fiona_07">
+                </div>
+                <div class="input-row">
+                    <label>Email</label>
+                    <input type="email" class="input-field" value="quynhfiona@gmail.com">
+                </div>
+
+                <div class="input-row">
+                    <label>Giới tính</label>
+                    <div class="edit-zone">
+                        <span class="btn-setup" onclick="activateInput(this)">Thiết lập ngay</span>
+                        <select class="input-inline hidden">
+                            <option value="" disabled selected>Chọn giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <label>Ngày sinh</label>
+                    <div class="edit-zone">
+                        <span class="btn-setup" onclick="activateInput(this)">Thiết lập ngay</span>
+                        <input type="date" class="input-inline hidden">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <label>Số CCCD</label>
+                    <div class="edit-zone">
+                        <span class="btn-setup" onclick="activateInput(this)">Thiết lập ngay</span>
+                        <input type="text" class="input-inline hidden" placeholder="Nhập số CCCD">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-save" onclick="alert('Lưu thành công!')">Lưu</button>    
+        </section>
+
+        <section class="history-section">
+            <h2 class="title-blue center">Xem lịch sử mua hàng</h2>
+
+            <div id="order-container">
+                </div>
+
+            <div class="order-group" style="margin-top: 30px;">
+                <h3 class="group-label">Đã đánh giá</h3>
+                <div id="reviewed-container"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid container">
+            <div class="footer-column partners">
+                <h3>Các đối tác</h3>
+                <div class="partner-logos">
+                    <img src="images/cd.svg" alt="Dior">
+                    <img src="images/prada.svg" alt="Prada">
+                    <img src="images/crh.svg" alt="Chrome Hearts">
+                    <img src="images/gmt.svg" alt="Gentle Monster">
+                    <img src="images/rayban.svg" alt="Rayban">
+                    <img src="images/persol.svg" alt="Persol">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hotline</h3>
+                <p>1900 1999</p>
+                <p>(9:00 - 22:00)</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Email</h3>
+                <p>hello@matmoeyewear.com</p>
+            </div>
+
+            <div class="footer-column introduction">
+                <h3>Giới thiệu</h3>
+                <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+            </div>
+
+            <div class="footer-column policies">
+                <h3>Chính sách</h3>
+                <ul class="policy-links">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+   
+    <script src="js/chatbox.js"></script>
+    <script>
+        function showEdit(type) {
+            const row = document.getElementById('row-' + type);
+            const link = row.querySelector('.btn-setup');
+            const input = row.querySelector('.input-inline');
+
+            link.classList.add('hidden');
+            input.classList.remove('hidden');
+            input.focus();
+            
+            if(type === 'ngaysinh') {
+                input.click();
+            }
+        }
+        
+        function activateInput(element) {
+            const inputField = element.nextElementSibling;
+            element.classList.add('hidden');
+            inputField.classList.remove('hidden');
+            inputField.focus();
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            // Đọc mảng lịch sử từ LocalStorage
+            let orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const container = document.getElementById("order-container"); 
+
+            if (!container) {
+                console.error("Không tìm thấy thẻ có id='order-container' trên giao diện!");
+                return;
+            }
+
+            container.style.display = "flex";
+            container.style.flexDirection = "column";
+            container.style.gap = "30px";
+
+            // Phân loại đơn hàng theo trạng thái
+            const waitingOrders = orders.filter(o => o.status === "Chờ xác nhận");
+            const canceledOrders = orders.filter(o => o.status === "Đã hủy");
+
+            // Hàm sinh thẻ Card đơn hàng
+            function createOrderCard(order) {
+                let totalProductPrice = 0;
+                const orderItems = order.items || [];
+                
+                const productsHTML = orderItems.map(item => {
+                    totalProductPrice += item.price * item.quantity;
+                    return `
+                        <div class="product-box" style="border-bottom: 1px dashed #eee; padding-bottom: 10px; margin-bottom: 10px; display: flex; gap: 15px; align-items: center;">
+                            <img src="${item.img || 'https://via.placeholder.com/80'}" alt="${item.productName}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                            <div class="product-info" style="flex: 1;">
+                                <h4 style="margin: 0; font-size: 14px; color: #333;">${item.productName}</h4>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Phân loại: ${item.category || 'Mắt kính'}</p>
+                            </div>
+                            <div class="product-price-qty" style="text-align: right;">
+                                <span class="qty" style="display: block; color: #666; font-size: 13px;">x${item.quantity}</span>
+                                <span class="price" style="font-weight: bold; color: #333;">${item.price.toLocaleString('vi-VN')}đ</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                const finalTotal = order.totalAmount !== undefined ? order.totalAmount : (totalProductPrice + (order.shippingFee || 0));
+                const voucherText = order.voucherApplied && order.voucherApplied !== "Không có" 
+                    ? `${order.voucherApplied} (-${order.discountPercent || 0}%)` 
+                    : 'Không có';
+
+                let actionButton = '';
+                let statusColor = '';
+
+                if (order.status === "Chờ xác nhận") {
+                    statusColor = "#ffa500"; 
+                    actionButton = `<button class="btn-outline-red btn-action-order" data-action="cancel" data-id="${order.orderId}" style="border: 1px solid #ff4d4f; color: #ff4d4f; padding: 6px 15px; border-radius: 4px; cursor: pointer; background: transparent;">Hủy đơn</button>`;
+                } else if (order.status === "Đã hủy") {
+                    statusColor = "#ff4d4f"; 
+                    actionButton = `<button class="btn-solid-blue btn-action-order" data-action="rebuy" data-id="${order.orderId}" style="background: #000181; color: white; border: none; padding: 6px 15px; border-radius: 4px; cursor: pointer;">Mua lại</button>`;
+                }
+
+                return `
+                    <div class="card" style="background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: left;">
+                        <div class="order-header" style="padding-bottom: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555; margin-bottom: 10px;">
+                            Mã đơn hàng: ${order.orderId}
+                        </div>
+                        <div class="order-products-list">${productsHTML}</div>
+                        <div class="billing-details" style="margin-top: 10px; padding-top: 10px;">
+                            <div class="bill-row" style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px; color: #666;">
+                                <span>Tổng tiền hàng</span><span>${totalProductPrice.toLocaleString('vi-VN')}đ</span>
+                            </div>
+                            <div class="bill-row" style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px; color: #666;">
+                                <span>Mã giảm giá</span><span style="color: ${order.discountPercent > 0 ? '#ff4d4f' : '#666'}; font-weight: ${order.discountPercent > 0 ? 'bold' : 'normal'};">${voucherText}</span>
+                            </div>
+                            <div class="bill-row" style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px; color: #666;">
+                                <span>Phí vận chuyển</span><span>${(order.shippingFee || 0).toLocaleString('vi-VN')}đ</span>
+                            </div>
+                            <div class="bill-row total" style="display: flex; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                                <strong>Thành tiền:</strong>
+                                <span style="font-weight:bold; color:#000181; font-size: 16px;">${finalTotal.toLocaleString('vi-VN')}đ</span>
+                            </div>
+                        </div>
+                        <div class="card-footer" style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 10px;">
+                            <span class="status-text" style="color: ${statusColor}; font-weight: bold;">${order.status}</span>
+                            ${actionButton}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Hàm build khối danh mục
+            function buildBlockSection(title, count, contentHTML) {
+                return `
+                    <div class="order-status-block" style="background: #fbfbfb; padding: 20px; border-radius: 10px; border: 1px solid #f0f0f0;">
+                        <h3 style="margin-top: 0; color: #000181; font-size: 18px; border-left: 4px solid #000181; padding-left: 10px; margin-bottom: 15px; text-align: left;">
+                            ${title} (${count})
+                        </h3>
+                        <div class="block-list-container" style="display: flex; flex-direction: column; gap: 15px;">
+                            ${contentHTML}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Tiến hành render dữ liệu
+            let waitingHTML = waitingOrders.length === 0 
+                ? `<p class="no-order" style="color: #888; font-style: italic; text-align: center; padding: 10px 0;">Bạn không có đơn hàng nào đang chờ xác nhận.</p>`
+                : waitingOrders.map(order => createOrderCard(order)).join('');
+
+            let shippingHTML = `<p style="color: #888; font-style: italic; text-align: center; padding: 10px 0;">Hiện không có đơn hàng nào trong tiến trình bàn giao vận chuyển.</p>`;
+            let completedHTML = `<p style="color: #888; font-style: italic; text-align: center; padding: 10px 0;">Không có đơn hàng cũ nào đã hoàn thành gần đây.</p>`;
+
+            let canceledHTML = canceledOrders.length === 0 
+                ? `<p class="no-order" style="color: #888; font-style: italic; text-align: center; padding: 10px 0;">Danh sách lịch sử trống.</p>`
+                : canceledOrders.map(order => createOrderCard(order)).join('');
+
+            // Đổ dữ liệu vào container chính
+            container.innerHTML = `
+                ${buildBlockSection("Chờ xác nhận", waitingOrders.length, waitingHTML)}
+                ${buildBlockSection("Chờ giao hàng", 0, shippingHTML)}
+                ${buildBlockSection("Đã giao hàng", 0, completedHTML)}
+                ${buildBlockSection("Đã hủy", canceledOrders.length, canceledHTML)}
+            `;
+
+            // Ủy nhiệm sự kiện bấm nút Hủy / Mua lại
+            container.addEventListener("click", function (e) {
+                const targetBtn = e.target.closest('.btn-action-order');
+                if (!targetBtn) return;
+
+                const orderId = targetBtn.getAttribute("data-id");
+                const action = targetBtn.getAttribute("data-action");
+
+                if (action === "cancel") {
+                    if (confirm("Bạn có chắc chắn muốn hủy đơn hàng này không?")) {
+                        orders = orders.map(order => {
+                            if (order.orderId === orderId) {
+                                order.status = "Đã hủy";
+                            }
+                            return order;
+                        });
+                        localStorage.setItem('orders', JSON.stringify(orders));
+                        location.reload();
+                    }
+                }
+
+                if (action === "rebuy") {
+                    const currentOrder = orders.find(o => o.orderId === orderId);
+                    if (currentOrder && currentOrder.items) {
+                        const reBuyItem = currentOrder.items.map(item => ({
+                            name: item.productName,
+                            price: item.price,
+                            quantity: item.quantity,
+                            img: item.img
+                        }));
+
+                        localStorage.setItem("rebuy_items", JSON.stringify(reBuyItem));
+                        window.location.href = "thanh-toan.html";
+                    }
+                }
+            });
+
+            // Giao diện đánh giá mẫu
+            const reviewedContainer = document.getElementById("reviewed-container");
+            if (reviewedContainer) {
+                reviewedContainer.innerHTML = `
+                    <div class="review-card" style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #fff; text-align: left;">
+                        <div class="product-box mini" style="display:flex; gap:10px; align-items:center; margin-bottom:10px;">
+                            <img src="https://via.placeholder.com/60" alt="product">
+                            <div class="product-info"><h4 style="margin:0;">Kính râm Gentle Monster</h4></div>
+                            <span class="blue-text" style="color: #007bff; margin-left:auto; font-size:13px;">Đã hoàn thành</span>
+                        </div>
+                        <div class="review-body">
+                            <div class="user-meta" style="display:flex; gap:5px; align-items:center; margin-bottom:5px; font-size:13px;">
+                                <div class="avatar-small" style="width:20px; height:20px; background:#ccc; border-radius:50%; text-align:center; line-height:20px; font-size:11px;">Q</div>
+                                <strong>@quynhfiona</strong><span class="stars" style="color:#ff4d4f;">★★★★★</span>
+                            </div>
+                            <p class="review-text" style="font-size:13px; color:#555; margin:5px 0;">Bên ngoài hình y như mẫu chụp luôn, gọng cũng cứng cáp, không có chi tiết thừa, giao cũng nhanh nữa, cũng rất hợp với mặt tui, sẽ ủng hộ shop dài dàiiiiiii.</p>
+                            
+                        </div>
+                    </div>`;
+            }
+        });
+    </script>
+    <script src="js/dang-nhap-dang-ky.js"></script>
+</body>
+</html>

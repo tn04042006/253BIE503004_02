@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mắt Mơ - Trang Chủ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="js/search.js"></script>
+  
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-background"></div>
+
+        <!-- Ảnh chữ phía trên -->
+        <img src="images/matmo.png" alt="matmo" class="bg-img img-top">
+        
+        <!-- Ảnh chữ phản chiếu phía dưới -->
+        <img src="images/matmo1.png" alt="matmo" class="bg-img img-bottom">
+
+        <!-- Kính 3D đè lên trên tất cả -->
+        <div class="model-3d-container">
+            <model-viewer 
+                src="images/prada_vintage_star_glasses.glb" 
+                alt="Mắt kính 3D MatMo" 
+                auto-rotate 
+                camera-controls 
+                disable-zoom
+                interaction-prompt="none"
+                rotation-per-second="30deg">
+            </model-viewer>
+        </div>
+    </section>
+
+    <section class="banner-slider">
+        <div class="slider-wrapper">
+            <div class="slide active">
+                <img src="images/banner1.jpg" alt="Deal Hè Sống Động 1">
+            </div>
+            <div class="slide">
+                <img src="images/banner2.jpg" alt="Deal Hè Sống Động 2">
+            </div>
+            <div class="slide">
+                <img src="images/banner3.jpg" alt="Deal Hè Sống Động 3">
+            </div>
+        </div>
+
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <button class="slider-btn next-btn">&#10095;</button>
+    </section>
+    <!-- PHẦN PHÂN LOẠI SẢN PHẨM -->
+    <section class="classification-section">
+        <div class="container">
+            <h2 class="main-title">PHÂN LOẠI SẢN PHẨM</h2>
+            
+            <div class="category-wrapper">
+                <a href="sp-gong-kinh.html">
+                    <!-- Loại gọng -->
+                    <div class="cat-item">
+                        <div class="cat-card">
+                            <img src="images/loaigong.svg" alt="Loại gọng">
+                        </div>
+                        <span class="cat-name">Loại gọng</span>
+                    </div>
+                </a>
+                <a href="sp-trong-kinh.html">
+                    <!-- Loại tròng -->
+                    <div class="cat-item">
+                        <div class="cat-card">
+                            <img src="images/loaitrong.svg" alt="Loại tròng">
+                        </div>
+                        <span class="cat-name">Loại tròng</span>
+                    </div>
+                </a>
+                <a href="sp-dang-mat.html">
+                    <!-- Hình dáng mặt -->
+                    <div class="cat-item">
+                        <div class="cat-card">
+                            <img src="images/hinhdangmat.svg" alt="Hình dáng mặt">
+                        </div>
+                        <span class="cat-name">Hình dáng mặt</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- PHẦN SẢN PHẨM NỔI BẬT -->
+    <section class="featured-products">
+        <div class="container featured-container">
+            <!-- Phần chữ dọc bên trái -->
+            <div class="featured-left">
+                <h2 class="vertical-text">SẢN <br> PHẨM <br> NỔI <br> BẬT</h2>
+            </div>
+            
+            <div class="featured-grid" id="featured_grid">
+                </div>
+        </div>
+    </section>
+    <section class="extra-products">
+        <div class="container">
+            <div class="product-row">
+                <div class="product-grid-4" id="hot-products-grid"></div>
+                <div class="row-label">
+                    <h2 class="vertical-text">SẢN <br> PHẨM <br> BÁN <br> CHẠY</h2>
+                </div>
+            </div>
+
+            <div class="product-row">
+                <div class="row-label">
+                    <h2 class="vertical-text">SẢN <br> PHẨM <br> GIẢM <br> GIÁ</h2>
+                </div>
+                <div class="product-grid-4" id="sale-products-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="products-list" style="display: none;"></div>
+    <div id="pagination-ctrl" style="display: none;"></div>
+
+    <section class="blog-section">
+    <div class="container blog-container">
+        <!-- CỘT TRÁI: BÀI VIẾT NỔI BẬT -->
+        <div class="blog-featured-wrapper">
+            <h2 class="blog-title-green">BÀI VIẾT NỔI BẬT</h2>
+            <div id="featured-blog-content">
+                <!-- JS render main-blog-card -->
+            </div>
+        </div>
+
+        <!-- CỘT PHẢI: XEM NHIỀU NHẤT -->
+        <div class="blog-sidebar-wrapper">
+            <h2 class="blog-title-green">XEM NHIỀU NHẤT</h2>
+            <div id="sidebar-blog-list" class="side-blog-list">
+                <!-- JS render side-blog-item -->
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- CỘT 1: GÓP Ý -->
+            <div class="footer-col feedback-section">
+                <h2 class="footer-title">Góp ý</h2>
+                <p class="footer-text">
+                    Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.
+                </p>
+                <a href="gop-y.html" class="feedback-button">Đóng góp ý kiến</a>
+            </div>
+
+                    <!-- CỘT 2: HOTLINE & EMAIL -->
+            <div class="footer-col contact-section">
+                <div class="contact-item">
+                    <h2 class="footer-title">Hotline</h2>
+                    <p class="footer-text">1900 1999</p>
+                    <p class="footer-text">(9:00 - 22:00)</p>
+                </div>
+                <div class="contact-item" style="margin-top: 30px;">
+                    <h2 class="footer-title">Email</h2>
+                    <p class="footer-text">hello@matmoeyewear.com</p>
+                </div>
+            </div>
+
+                <!-- CỘT 3: ĐỐI TÁC -->
+            <div class="footer-col partners-section">
+                <h2 class="footer-title">Các đối tác</h2>
+                <div class="partner-logos-grid">
+                    <img src="images/gmt.svg" alt="Gentle Monster" class="partner-img">
+                    <img src="images/rayban.svg" alt="Ray-Ban" class="partner-img">
+                    <img src="images/persol.svg" alt="Persol" class="partner-img">
+                    <img src="images/cd.svg" alt="Dior" class="partner-img">
+                    <img src="images/prada.svg" alt="Prada" class="partner-img">
+                    <img src="images/crh.svg" alt="Chrome Hearts" class="partner-img">
+                </div>
+            </div>
+
+                <!-- HÀNG THỨ 2: GIỚI THIỆU (Chiếm 2 cột) -->
+            <div class="footer-col intro-section">
+                <h2 class="footer-title">Giới thiệu</h2>
+                <p class="footer-text">
+                    Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.
+                </p>
+            </div>
+
+                <!-- HÀNG THỨ 2: CHÍNH SÁCH -->
+            <div class="footer-col policies-section">
+                <h2 class="footer-title">Chính sách</h2>
+                <ul class="policy-list">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+                <!-- HÀNG CUỐI: TÊN CÔNG TY -->
+            <div class="footer-bottom-name">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+    <div class="ai-chatbox-toggle" onclick="toggleChatbox()">
+        <img src="images/logoAI.svg" alt="AI Chatbot" class="chat-icon">
+    </div>
+    <div id="vrPrivacyModal" class="vr-modal">
+        <div class="vr-modal-content">
+            <button class="vr-close-x" onclick="closeVRModal()">✕</button>
+
+            <div id="vrStepTerms" class="vr-step-container active">
+                <div class="vr-modal-left">
+                    <img src="images/face.png" alt="VR Try-on" class="vr-left-img" onerror="this.src='https://via.placeholder.com/300?text=FittingBox+Image'">
+                </div>
+
+                <div class="vr-modal-right">
+                    <h2 class="vr-title">Chúng tôi chỉ phát hiện các điểm chung trên khuôn mặt bạn và hết!</h2>
+                    
+                    <div class="vr-features">
+                        <div class="vr-feature-item">
+                            <span><img src="images/tick.svg"></span>
+                            <p>Không nhận dạng hay định danh khuôn mặt</p>
+                        </div>
+                        <div class="vr-feature-item">
+                            <span><img src="images/tick.svg"></span>
+                            <p>Không lưu trữ hoặc chia sẻ hình ảnh của bạn</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-action-buttons">
+                        <button class="vr-btn vr-btn-decline" onclick="closeVRModal()">Tôi không đồng ý</button>
+                        <button class="vr-btn vr-btn-accept" onclick="handleVRAccept()">Tôi hoàn toàn đồng ý</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="vrStepLive" class="vr-step-container">
+                <div class="vr-live-view">
+                    <img src="images/tryon.png" alt="VR Live View" class="vr-placeholder-img">
+                    <div class="vr-live-overlay-text">Đang kết nối hệ thống thử kính... 🕶️</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        window.customRender = function(products) {
+            const hotGrid = document.getElementById('hot-products-grid');
+            const saleGrid = document.getElementById('sale-products-grid');
+
+            if (!products || products.length === 0) {
+                if(hotGrid) hotGrid.innerHTML = "Không có sản phẩm";
+                if(saleGrid) saleGrid.innerHTML = "Không có sản phẩm";
+                return;
+            }
+
+            // Phân tách dữ liệu: 4 sản phẩm đầu bán chạy, 4 sản phẩm tiếp theo giảm giá
+            const hotProducts = products.slice(0, 4);
+            const saleProducts = products.slice(4, 8); 
+
+            // 1. Hàm render riêng cho danh sách BÁN CHẠY
+            function createHotProductHTML(sp, defaultBadge) {
+                let linkAnh = sp.hinh_anh_chinh || (sp.mau_sac?.[0]?.hinh_anh?.[0]) || 'media/placeholder.png';
+                let badgeText = sp.so_luong_ban ? `${sp.so_luong_ban} sp` : defaultBadge;
+
+                return `
+                    <div class="item-card" onclick="location.href='detail.html?id=${sp.ma_sp}'">
+                        <span class="badge">${badgeText}</span>
+                        <div class="item-img-small">
+                            <img src="${linkAnh}" alt="${sp.ten_sp}" loading="lazy" onerror="this.src='https://via.placeholder.com/250?text=MatMo+Eyewear'">
+                        </div>
+                        <div class="item-info">
+                            <div class="text-left">
+                                <h4>${sp.ten_sp}</h4>
+                                <p class="price">${Number(sp.gia).toLocaleString()}đ</p>
+                            </div>
+                            <div class="icons-right">
+                                <img src="images/add.svg" class="btn-icon" title="Thêm vào giỏ" 
+                                    onclick="addToCart(event, '${sp.ma_sp}', '${sp.ten_sp}', ${sp.gia}, '${linkAnh}')">
+                                <img src="images/VR.svg" class="btn-icon" title="Thử kính online" onclick="openVRModal(event)">
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 2. Hàm render riêng cho danh sách GIẢM GIÁ
+            function createSaleProductHTML(sp) {
+                let linkAnh = sp.hinh_anh_chinh || (sp.mau_sac?.[0]?.hinh_anh?.[0]) || 'media/placeholder.png';
+                const giaGoc = Number(sp.gia).toLocaleString();
+                const giaSale = Number(Math.round(sp.gia * 0.75 / 1000) * 1000).toLocaleString();
+
+                return `
+                    <div class="product-card" onclick="location.href='detail.html?id=${sp.ma_sp}'">
+                        <div class="sale-badge">SALE 🔥</div>
+                        <div class="product-image">
+                            <img src="${linkAnh}" loading="lazy" onerror="this.src='https://via.placeholder.com/250?text=MatMo+Eyewear'">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">${sp.ten_sp}</h3>
+                            <div class="product-meta">
+                                <div class="product-price-block">
+                                    <span class="product-price">${giaSale}đ</span>
+                                    <span class="product-old-price" style="text-decoration: line-through; color: #888; font-size: 13px; margin-left: 8px; font-weight: normal;">
+                                        ${giaGoc}đ
+                                    </span>
+                                </div>
+                                <div class="product-buttons">
+                                    <img src="images/add.svg" 
+                                        class="add-icon" 
+                                        title="Thêm vào giỏ"
+                                        onclick="addToCart(event, '${sp.ma_sp}', '${sp.ten_sp}', ${sp.gia}, '${linkAnh}')">
+                                    <img src="images/VR.svg" class="vr-icon" title="Thử kính online" onclick="openVRModal(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Tiến hành đổ dữ liệu vào 2 khu vực khác nhau
+            if (hotGrid) {
+                hotGrid.innerHTML = hotProducts.map(sp => createHotProductHTML(sp, "Bán chạy")).join('');
+            }
+            
+            if (saleGrid) {
+                saleGrid.innerHTML = saleProducts.map(sp => createSaleProductHTML(sp)).join('');
+            }
+            
+            // Vô hiệu hóa thanh phân trang ẩn của products.js một cách an toàn
+            const paginationCtrl = document.getElementById('pagination-ctrl');
+            if (paginationCtrl) paginationCtrl.style.setProperty('display', 'none', 'important');
+        };
+
+        // Hàm điều khiển hiển thị Modal VR (Có event xử lý nổi bọt)
+        function openVRModal(event) {
+            if (event) event.stopPropagation(); // Ngăn chặn chuyển hướng trang detail.html
+            
+            const modal = document.getElementById('vrPrivacyModal');
+            const stepTerms = document.getElementById('vrStepTerms');
+            const stepLive = document.getElementById('vrStepLive');
+            
+            if (modal) {
+                modal.style.display = 'block'; // Đảm bảo ghi đè trạng thái ẩn
+                modal.classList.add('active');
+                if (stepTerms) stepTerms.classList.add('active');
+                if (stepLive) stepLive.classList.remove('active');
+            }
+        }
+
+        function handleVRAccept() {
+            const stepTerms = document.getElementById('vrStepTerms');
+            const stepLive = document.getElementById('vrStepLive');
+            if (stepTerms) stepTerms.classList.remove('active');
+            if (stepLive) stepLive.classList.add('active');
+        }
+
+        function closeVRModal() {
+            const modal = document.getElementById('vrPrivacyModal');
+            if (modal) {
+                modal.style.display = 'none';
+                modal.classList.remove('active');
+            }
+        }
+    </script>
+
+    <script>
+        async function loadFeatured() {
+            console.log("🚀 Đang tải dữ liệu...");
+            const grid = document.getElementById('featured_grid');
+            if (!grid) {
+                console.error("❌ Không tìm thấy thẻ HTML có id='featured_grid' trên trang này!");
+                return;
+            }
+
+            try {
+                const apiUrl = 'http://localhost:5000/api/products?xu_huong=' + encodeURIComponent('Nổi bật');
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                console.log("📦 Dữ liệu nhận được:", data);
+                
+                if (!data || data.length === 0) {
+                    grid.innerHTML = "<p style='color:#fff; text-align:center; grid-column: 1/-1;'>Chưa có sản phẩm nổi bật nào.</p>";
+                    return;
+                }
+
+                grid.innerHTML = data.map(p => {
+                    const is3D = p.hinh_anh_chinh && (p.hinh_anh_chinh.toLowerCase().endsWith('.glb') || p.hinh_anh_chinh.toLowerCase().endsWith('.gltf'));
+
+                    return `
+                    <div class="item-card" onclick="location.href='detail.html?id=${p.ma_sp}'" style="cursor: pointer;">
+                        <div class="item-img">
+                            ${is3D ? `
+                                <model-viewer 
+                                    src="${p.hinh_anh_chinh}" 
+                                    alt="${p.ten_sp}"
+                                    auto-rotate 
+                                    camera-controls 
+                                    shadow-intensity="1"
+                                    disable-zoom>
+                                </model-viewer>
+                            ` : `
+                                <img src="${p.hinh_anh_chinh}" alt="${p.ten_sp}" style="width:100%; height:100%; object-fit:contain;" onerror="this.src='https://via.placeholder.com/150'">
+                            `}
+                        </div>
+                        <div class="item-info">
+                            <div class="text-left">
+                                <h4>${p.ten_sp || 'Tên sản phẩm'}</h4>
+                                <p class="price">${p.gia ? p.gia.toLocaleString() : '0'}đ</p>
+                            </div>
+                            <div class="icons-right">
+                                <img src="images/add.svg" alt="Add" class="btn-icon" onclick="addToCart(event, '${p.ma_sp}', '${p.ten_sp}', ${p.gia}, '${p.hinh_anh_chinh}')">
+                                <img src="images/VR.svg" alt="VR" class="btn-icon" onclick="openVRModal(event)">
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                }).join('');
+
+                console.log("✅ Đã hiển thị sản phẩm lên trang chính!");
+
+            } catch (error) {
+                console.error("❌ Lỗi fetch dữ liệu:", error);
+                grid.innerHTML = "<p style='color:red; text-align:center; grid-column: 1/-1;'>Lỗi kết nối Server!</p>";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadFeatured);
+    </script>
+
+    <script src="js/products.js"></script>
+    <script src="js/dang-nhap-dang-ky.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/blog-detail.js"></script> 
+    <script src="js/chatbox.js"></script>
+
+</body>
+
+</html>

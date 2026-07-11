@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Baloo+2:wght@600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Momo Signature';
+    src: url('../fonts/Momo-Signature.ttf');
+}
+@font-face {
+    font-family: 'Momo Trust Display';
+    src: url('../fonts/Momo-Trust-Display.ttf');
+}
+
+.about-us-page {
+    background: linear-gradient(180deg, rgba(150, 231, 255, 1) 0%, rgba(97, 150, 216, 1) 11.06%, #3D5EBD 23.56%, rgba(0, 1, 144, 1) 40.38%, rgba(61, 94, 189, 1) 46.15%, rgba(97, 150, 216, 1) 77.4%, rgba(150, 231, 255, 1) 93.27%);
+    color: #FFFFFF; overflow-x: hidden;
+}
+
+.script-font { font-family: 'Dancing Script', cursive !important; text-transform: none !important; }
+
+.display-font { 
+    font-family: 'Baloo 2', cursive !important; 
+    text-transform: uppercase;
+}
+
+/* --- CÁC SECTION --- */
+.hero-section { width: 100%; margin-top: 20px; margin-bottom: 40px; }
+.hero-img { width: 100%; border-radius: 20px; display: block; }
+
+.quote-brand-section { display: flex; justify-content: center; align-items: center; gap: 80px; margin-top: 0; margin-bottom: 50px; }
+.quote-text { max-width: 650px; font-size: 24px; line-height: 1.4; text-align: left; }
+
+.brand-large { 
+    font-family: 'Baloo 2', cursive;
+    font-size: 110px; 
+    color: #EED1F5; 
+    line-height: 0.7; 
+    margin: 0; 
+    letter-spacing: -2px; 
+    text-transform: none !important; 
+}
+
+.story-flex { display: flex; gap: 40px; align-items: center; margin-bottom: 60px; }
+.story-img-box img { width: 400px; border-radius: 25px; }
+.story-content { font-size: 24px; line-height: 1.6; text-align: justify; }
+
+/* --- PHẦN ĐỊNH VỊ  --- */
+.divider-line { 
+    height: 3px; 
+    background: white; 
+    margin: 60px 0; 
+    width: 100%;
+}
+
+.pos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 0;
+}
+
+.pos-left {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+}
+
+.main-title {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    font-size: 70px;
+    color: #EED1F5;
+    margin: 0;
+}
+
+.sub-title {
+    position:absolute;
+    right: 0px;     /* chỉnh trái phải */
+    bottom: -30px;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 40px;
+    color: #FFFFFF;
+    
+}
+
+.pos-right {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    text-transform: none !important;
+}
+
+.slogan-line-1{
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+.slogan-line-2{
+    font-size: 42px;
+    margin-top: 5px;
+}
+
+/* --- ẢNH MODEL SÁT NHAU --- */
+.model-flex-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 40px;
+    margin-bottom: 80px ; 
+}
+
+.model-item {
+    flex: 1;
+    max-width: 500px; 
+}
+
+.model-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* --- GIÁ TRỊ CỐT LÕI (Sát ảnh trên) --- */
+.values-section {
+    margin-top: 30px;
+    padding-top: 20px; 
+}
+
+.section-title { 
+    text-align: center; 
+    font-size: 50px; 
+    color: #EED1F5; 
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    margin-top: 0 !important; 
+    margin-bottom: 50px; 
+    line-height: 1;
+}
+
+.values-grid { 
+    display: flex; 
+    justify-content: space-between; 
+    text-align: center;
+    gap: 20px;
+}
+
+.value-item { 
+    flex: 1; 
+    font-size: 26px; 
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.value-item span { 
+    display: block; 
+    font-size: 18px; 
+    opacity: 0.9; 
+    margin-top: 5px; 
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .pos-container { flex-direction: column; align-items: center; text-align: center; gap: 30px; }
+    .pos-left { flex-direction: column; align-items: center; gap: 0; }
+    .pos-right { text-align: center; font-size: 24px; }
+    .slogan-line-2 { padding-right: 0; }
+    .model-flex-group { flex-direction: column; align-items: center; gap: 15px; }
+    .model-item img { width: 100%; height: auto; }
+}

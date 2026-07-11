@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Tròng Kính - Mắt Mơ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sp-trong-kinh.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+</head>
+<body class="lens-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-notice">Mắt Mơ chỉ bán kèm tròng khi Khách hàng mua kính</h2>
+
+            <!-- ================= SECTION 1: TRÒNG ĐƠN ================= -->
+            <section class="lens-section">
+                <h3 class="category-title">TRÒNG ĐƠN</h3>
+                <div class="product-grid">
+                    
+                    <!-- SP 1: ZINMY Cận -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-z-c.png" alt="ZINMY Cận"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính cận ZINMY</h4>
+                                        <p class="price">1.500.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-zinmy-can" data-name="Tròng kính cận ZINMY" data-price="1500000" data-img="images/tr-z-c.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>                                
+                                </div>
+                                <div class="input-area">
+                                    <h5 class="label-title">Độ cận *</h5>
+                                    <div class="input-row">
+                                        <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính cận ZINMY được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+
+                    </article>
+
+                    <!-- SP 2: ZINMY Viễn -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-z-v.png" alt="ZINMY Viễn"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính viễn ZINMY</h4>
+                                        <p class="price">2.000.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-zinmy-vien" data-name="Tròng kính viễn ZINMY" data-price="2000000" data-img="images/tr-z-v.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>
+                                </div>
+                                <div class="input-area">
+                                    <h5 class="label-title">Độ viễn *</h5>
+                                    <div class="input-row">
+                                        <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính viễn ZINMY được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+
+                    <!-- SP 3: MCATT Cận -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-m-c.png" alt="MCATT Cận"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính cận MCATT</h4>
+                                        <p class="price">1.000.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-mcatt-can" data-name="Tròng kính cận MCATT" data-price="1000000" data-img="images/tr-m-c.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>
+                                </div>
+                                <div class="input-area">
+                                    <h5 class="label-title">Độ cận *</h5>
+                                    <div class="input-row">
+                                        <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính cận MCATT được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+
+                    <!-- SP 4: MCATT Viễn -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-m-v.png" alt="MCATT Viễn"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính viễn MCATT</h4>
+                                        <p class="price">1.800.000đ/cặp</p>
+                                                                            </div>
+                                        <button class="btn-cart" data-id="trong-mcatt-vien" data-name="Tròng kính viễn MCATT" data-price="1800000" data-img="images/tr-m-v.png">
+                                            <img src="images/shoppingcart.svg" alt="Cart">
+                                        </button>
+                                    </div>
+                                <div class="input-area">
+                                    <h5 class="label-title">Độ viễn *</h5>
+                                    <div class="input-row">
+                                        <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính viễn MCATT được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 2: TRÒNG ĐỔI MÀU ================= -->
+            <section class="lens-section">
+                <h3 class="category-title">TRÒNG ĐỔI MÀU</h3>
+                <div class="product-grid">
+                    <!-- SP 5: Đổi màu Xanh lá -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-z-d-la.png" alt="ZINMY Xanh lá"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính đổi màu ZINMY</h4>
+                                        <p class="price">1.500.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-zinmy-doi-mau-la" data-name="Tròng kính đổi màu ZINMY - Xanh lá" data-price="1500000" data-img="images/tr-z-d-la.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>                                
+                                </div>
+                                <div class="input-area color-type">
+                                    <div class="side-by-side">
+                                        <label class="side-label">Độ cận/Viễn*</label>
+                                        <div class="eye-boxes">
+                                            <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                            <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side-by-side mt-10">
+                                        <label class="side-label">Màu</label>
+                                        <span class="tag-color">Xanh lá</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính đổi màu ZINMY được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+
+                    <!-- SP 6: Đổi màu Xanh dương -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-z-d-dg.png" alt="ZINMY Xanh dương"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính đổi màu ZINMY</h4>
+                                        <p class="price">1.500.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-zinmy-doi-mau-duong" data-name="Tròng kính đổi màu ZINMY - Xanh dương" data-price="1500000" data-img="images/tr-z-d-dg.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>                                
+                                </div>
+                                <div class="input-area color-type">
+                                    <div class="side-by-side">
+                                        <label class="side-label">Độ cận/Viễn*</label>
+                                        <div class="eye-boxes">
+                                            <div class="field"><label>Mắt trái</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                            <div class="field"><label>Mắt phải</label><input type="number" min="-10" max="10" step="0.25" value="0.00"></div>
+                                        </div>
+                                    </div>
+                                    <div class="side-by-side mt-10">
+                                        <label class="side-label">Màu</label>
+                                        <span class="tag-color blue">Xanh dương</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính đổi màu ZINMY được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 3: TRÒNG PHÂN CỰC ================= -->
+            <section class="lens-section">
+                <h3 class="category-title">TRÒNG PHÂN CỰC</h3>
+                <div class="product-grid">
+                    <!-- SP 7: Mát MCATT 1 -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-m-m.png" alt="Kính mát 1"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính mát MCATT Premium</h4>
+                                        <p class="price">3.000.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-mcatt-premium" data-name="Tròng kính mát MCATT Premium" data-price="3000000" data-img="images/tr-m-m.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính mát MCATT được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+
+                    <!-- SP 8: Mát MCATT 2 -->
+                    <article class="lens-card">
+                        <div class="card-top">
+                            <div class="lens-image"><img src="images/tr-m-m2.png" alt="Kính mát 2"></div>
+                            <div class="lens-info">
+                                <div class="header-row">
+                                    <div class="name-price">
+                                        <h4>Tròng kính mát MCATT</h4>
+                                        <p class="price">2.800.000đ/cặp</p>
+                                    </div>
+                                    <button class="btn-cart" data-id="trong-mcatt-mat-2" data-name="Tròng kính mát MCATT" data-price="2800000" data-img="images/tr-m-m2.png">
+                                        <img src="images/shoppingcart.svg" alt="Cart">
+                                    </button>                                
+                                </div>
+                            </div>
+                        </div>
+                        <p class="lens-desc">Tròng kính mát MCATT được chế tác từ chất liệu nhựa cao cấp, mỏng nhẹ và bền bỉ. Sản phẩm có lớp phủ chống ánh sáng xanh (Blue Cut/Blue Control) giúp giảm mỏi mắt, hạn chế tác hại từ màn hình điện thoại, máy tính và thiết bị điện tử. Ngoài ra, tròng kính còn có khả năng chống tia UV400, chống trầy xước và dễ vệ sinh.</p>
+                        <p class="lens-desc">Tròng kính được gia công và kiểm định chất lượng tạiHOYA Lens – Nhà máy tại Bình Dương, Việt Nam, ứng dụng công nghệ Nhật Bản tiên tiến, quy trình sản xuất nghiêm ngặt, đạt chuẩn ISO và SIAA đảm bảo tiêu chuẩn quốc tế về độ bền và độ chính xác quang học.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-grid container">
+            <!-- HÀNG 1 -->
+            <div class="footer-column partners">
+                <h3>Các đối tác</h3>
+                <div class="partner-logos">
+                    <img src="images/cd.svg" alt="Dior">
+                    <img src="images/prada.svg" alt="Prada">
+                    <img src="images/crh.svg" alt="Chrome Hearts">
+                    <img src="images/gmt.svg" alt="Gentle Monster">
+                    <img src="images/rayban.svg" alt="Rayban">
+                    <img src="images/persol.svg" alt="Persol">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hotline</h3>
+                <p>1900 1999</p>
+                <p>(9:00 - 22:00)</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Email</h3>
+                <p>hello@matmoeyewear.com</p>
+            </div>
+
+            <!-- HÀNG 2 -->
+            <div class="footer-column introduction">
+                <h3>Giới thiệu</h3>
+                <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+            </div>
+
+            <div class="footer-column policies">
+                <h3>Chính sách</h3>
+                <ul class="policy-links">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- HÀNG CUỐI -->
+            <div class="footer-bottom">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+        document.querySelectorAll('.btn-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 0. Kiểm tra trạng thái đăng nhập
+                const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+                if (!currentUser) {
+                    alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!");
+                    
+                    // Kích hoạt hiển thị modal đăng nhập
+                    const overlay = document.getElementById('modal-overlay');
+                    const loginModal = document.getElementById('modal-login');
+                    if (overlay && loginModal) {
+                        overlay.classList.add('active');
+                        loginModal.classList.add('active');
+                    }
+                    return; // Dừng hàm lại, không chạy tiếp các logic thêm giỏ hàng ở dưới
+                }
+                
+                // 1. Lấy thông tin cơ bản từ thuộc tính data của nút
+                const id = this.getAttribute('data-id');
+                let name = this.getAttribute('data-name');
+                const price = parseInt(this.getAttribute('data-price'));
+                const img = this.getAttribute('data-img');
+                
+                // 2. Tìm thẻ chứa sản phẩm để lấy thông tin độ cận/viễn nếu có
+                const card = this.closest('.lens-card');
+                
+                // SỬA LỖI 2: Tìm tất cả input type="number" bên trong card (bất kể thuộc class input-row hay eye-boxes)
+                const inputs = card.querySelectorAll('input[type="number"]');
+                
+                let eyeInfo = "";
+                let idSuffix = "";
+                
+                if (inputs.length === 2) {
+                    const leftEye = inputs[0].value;
+                    const rightEye = inputs[1].value;
+                    eyeInfo = ` (Trái: ${leftEye}, Phải: ${rightEye})`;
+                    
+                    // SỬA LỖI 1: Thay vì btoa(), ta tạo một chuỗi ID an toàn bằng chính số độ mắt (ví dụ: -1.25_-2.00)
+                    idSuffix = `-${leftEye}_${rightEye}`; 
+                }
+                
+                // Ghép thông tin độ vào tên sản phẩm để hiển thị ở giỏ hàng
+                const finalName = name + eyeInfo;
+                
+                // 3. Lấy giỏ hàng hiện tại từ localStorage
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                // Tạo object sản phẩm mới với ID duy nhất không lo lỗi tiếng Việt
+                const productItem = {
+                    id: id + idSuffix, 
+                    name: finalName,
+                    price: price,
+                    img: img,
+                    quantity: 1
+                };
+                
+                // Kiểm tra xem sản phẩm cùng loại cùng độ này đã có trong giỏ hàng chưa
+                const existingItemIndex = cart.findIndex(item => item.id === productItem.id);
+                
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1; // Nếu có rồi thì tăng số lượng
+                } else {
+                    cart.push(productItem); // Nếu chưa có thì thêm mới vào
+                }
+                
+                // 4. Lưu lại vào localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // 5. Thông báo thành công
+                alert('Đã thêm tròng kính vào giỏ hàng thành công!');
+            });
+        });
+    </script>
+    <script src="js/dang-nhap-dang-ky.js"></script>
+    <script src="js/chatbox.js"></script>
+
+</body>
+</html>

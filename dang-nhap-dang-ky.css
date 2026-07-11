@@ -1,0 +1,227 @@
+/* ==========================================================================
+   CSS CHO MODAL ĐĂNG NHẬP / ĐĂNG KÝ (BẢN GỘP HOÀN CHỈNH - ĐÃ FIX ACTIVE)
+   ========================================================================== */
+
+:root {
+    --font: 'Momo Trust Display', 'Segoe UI', Roboto, sans-serif;
+    --matmo-green: #D6F9A8;      /* Nền xanh lá */
+    --matmo-input: #E5FFB1;      /* Nền input */
+    --matmo-blue: #000181;       /* Xanh đậm viền/chữ */
+    --matmo-pink: #EC8FD5;       /* Hồng chữ */
+    --matmo-purple-btn: #E2C7D3; /* Tím nhạt nút */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+/* 1. NỀN MỜ TOÀN MÀN HÌNH */
+.modal-overlay {
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 9998; 
+    display: none; /* Mặc định ẩn */
+    border: none !important; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 2. KHUNG CHỨA (PHẢI TRONG SUỐT HOÀN TOÀN) */
+.modal-box { 
+    display: none; /* Mặc định ẩn */
+    position: fixed; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -45%); /* Hơi lệch xuống một chút để chạy hiệu ứng mượt hơn */
+    z-index: 9999; 
+    background: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    padding: 0 !important;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ==========================================================================
+   KÍCH HOẠT HIỂN THỊ (SỬA LỖI ĐÈ DISPLAY)
+   ========================================================================== */
+.modal-overlay.active { 
+    display: block !important; 
+    opacity: 1;
+}
+
+.modal-box.active { 
+    display: block !important; 
+    opacity: 1;
+    transform: translate(-50%, -50%); /* Đẩy về chính giữa mượt mà */
+}
+
+/* 3. CONTAINER CHÍNH (FIX OVERSIZE & BORDERS) */
+.auth-container {
+    background-color: var(--matmo-green) !important;
+    border-radius: 40px;
+    padding: 30px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+    max-height: 90vh; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Hiện thanh cuộn nếu quá dài */
+    scrollbar-gutter: stable; 
+
+}
+
+/* Tùy chỉnh thanh cuộn nhỏ gọn */
+.auth-container::-webkit-scrollbar { width: 6px; }
+.auth-container::-webkit-scrollbar-thumb { background: var(--matmo-blue); border-radius: 10px; }
+
+.register-wide { width: 550px !important; }
+
+/* 4. LOGO & TIÊU ĐỀ */
+.auth-logo { width: 60px; margin-bottom: 10px; }
+.auth-title { 
+    color: var(--matmo-blue); font-size: 24px; font-weight: 800; 
+    margin-bottom: 10px; text-align: center;
+}
+
+/* 5. KHUNG VIỀN TRẮNG XANH BÊN TRONG */
+.auth-border-box {
+    border: 1px solid var(--matmo-blue);
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 6. INPUTS & GROUPS */
+.auth-container input[type="text"], 
+.auth-container input[type="password"],
+.auth-container input[type="email"] {
+    width: 100%;
+    background-color: var(--matmo-input);
+    border: 1.5px solid var(--matmo-blue);
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: var(--matmo-blue);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease; /* Thêm tí mượt mà khi đổi hiệu ứng font */
+}
+
+.input-group-gmail { position: relative; width: 100%; }
+.gmail-suffix { 
+    position: absolute; right: 20px; top: 10px; 
+    color: var(--matmo-blue); font-weight: 700; 
+}
+
+/* 7. CHỮ HƯỚNG DẪN & HIỆN MẬT KHẨU */
+.sub-text-hint { 
+    font-size: 9px; 
+    color: var(--matmo-blue); 
+    text-align: left; 
+    width: 100%;
+    margin: 0 0 10px 15px; 
+    line-height: 1.3;
+}
+
+.show-pw-row { 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 10px; 
+    margin-top: 5px; 
+    width: 100%;
+}
+
+.show-pw-row input[type="checkbox"] {
+    width: 18px; height: 18px; cursor: pointer;
+}
+
+.show-pw-row label { 
+    color: var(--matmo-blue); font-weight: 800; font-size: 16px; cursor: pointer;
+}
+
+/* 8. CÁC NÚT BẤM (BUTTONS) */
+
+/* Nút Tím Solid (Dùng cho Đăng nhập & Tiếp theo) */
+.btn-solid-purple {
+    background-color: var(--matmo-purple-btn);
+    color: var(--matmo-blue);
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    font-weight: 800;
+    font-size: 17px;
+    cursor: pointer;
+    width: 100%; 
+    transition: background 0.2s ease;
+}
+
+.btn-solid-purple:hover {
+    filter: brightness(0.95);
+}
+
+/* Nút Tiếp theo (Ghi đè width cho trang Register) */
+.btn-next {
+    width: auto !important;
+    padding: 12px 50px !important;
+}
+
+/* Nút Đăng nhập dạng khung (Trang Register) */
+.btn-outline-pink {
+    background-color: var(--matmo-input);
+    border: 1px solid #C4D6A2;
+    color: var(--matmo-pink);
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Nút Trắng hình chữ nhật (Quay lại Đăng ký) */
+.btn-white-rect {
+    background-color: #FFF9FB;
+    color: var(--matmo-blue);
+    border: none;
+    border-radius: 15px;
+    padding: 12px 30px;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; margin-left: auto; margin-right: auto;
+}
+
+/* 9. FOOTER - CĂN CHỈNH 2 BÊN */
+.auth-footer { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.btn-link-pink {
+    background: transparent; border: none; color: var(--matmo-pink);
+    font-weight: 700; font-size: 16px; cursor: pointer;
+    text-decoration: none;
+}
+
+/* Áp dụng font cho toàn bộ các thành phần trong modal */
+.auth-container, 
+.auth-container input, 
+.auth-container button, 
+.auth-container label, 
+.auth-container p {
+    font-family: var(--font) !important;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}

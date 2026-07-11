@@ -1,0 +1,89 @@
+<div id="modal-overlay" class="modal-overlay"></div>
+
+<div id="modal-login" class="modal-box">
+    <div class="auth-container">
+        <img src="images/logo.png" class="auth-logo">
+        <div class="auth-border-box">
+            <input type="email" placeholder="Nhập Email của bạn" id="login-email" required>
+            <input type="password" placeholder="Nhập mật khẩu" id="login-pass" required>
+            
+            <button class="btn-solid-purple" id="btn-do-login" style="width: 100%; margin-top: 10px;">Đăng nhập</button>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="#" id="go-to-forgot" style="color: var(--matmo-pink); font-weight: bold; text-decoration: none;">Quên mật khẩu ?</a>
+            </div>
+        </div>
+        <button class="btn-white-rect" id="go-to-register">Đăng ký tài khoản</button>
+    </div>
+</div>
+
+<div id="modal-forgot" class="modal-box">
+    <div class="auth-container">
+        <img src="images/logo.png" class="auth-logo">
+        <h2 class="auth-title">Khôi phục mật khẩu</h2>
+        <div class="auth-border-box">
+            <input type="email" placeholder="Nhập Email đã đăng ký" id="forgot-email" required>
+            <p class="sub-text-hint">Hệ thống sẽ gửi mã xác nhận OTP về email này</p>
+            
+            <button class="btn-solid-purple" id="btn-send-otp" style="width: 100%; margin-top: 10px;">Gửi mã OTP</button>
+        </div>
+        <button class="btn-white-rect" id="forgot-back-to-login">Quay lại Đăng nhập</button>
+    </div>
+</div>
+
+<div id="modal-register" class="modal-box">
+    <div class="auth-container register-wide">
+        <img src="images/logo.png" class="auth-logo">
+        <h2 class="auth-title">Tạo tài khoản Mắt Mơ</h2>
+        
+        <div class="auth-border-box">
+            <input type="text" placeholder="Họ" id="register-lastname">
+            <input type="text" placeholder="Tên" id="register-firstname">
+            
+            <div class="input-group-gmail">
+                <input type="text" placeholder="Tên người dùng" id="register-username" pattern="[A-Za-z0-9.]+" required>
+                <span class="gmail-suffix">@gmail.com</span>
+            </div>
+            <p class="sub-text-hint">Bạn có thể sử dụng chữ cái, số và dấu chấm</p>
+
+            <input type="tel" placeholder="Số điện thoại" id="register-phone" 
+                   inputmode="numeric" pattern="[0-9]*" maxlength="10" required>
+            <p class="sub-text-hint" style="margin-bottom: 15px;">Nhập số điện thoại gồm 10 chữ số</p>
+            
+            <input type="password" placeholder="Mật khẩu" class="class-password-input" id="register-pass" minlength="8" required>
+            <p class="sub-text-hint">Sử dụng từ 8 ký tự trở lên, kết hợp chữ cái thường, chữ cái in hoa, chữ số và ký tự đặc biệt</p>
+            
+            <input type="password" placeholder="Xác nhận lại mật khẩu" class="class-password-input" id="register-pass-confirm" minlength="8" required>
+            <p class="sub-text-hint">Sử dụng từ 8 ký tự trở lên, kết hợp chữ cái thường, chữ cái in hoa, chữ số và ký tự đặc biệt</p>
+            
+            <div class="show-pw-row">
+                <input type="checkbox" id="check-reg">
+                <label for="check-reg">Hiện mật khẩu</label>
+            </div>
+        </div>
+
+        <div class="auth-footer">
+            <button class="btn-outline-pink" id="back-to-login">Đăng nhập</button>
+            <button class="btn-solid-purple btn-next" id="btn-next-step">Tiếp theo</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-verify" class="modal-box">
+    <div class="auth-container">
+        <img src="images/logo.png" class="auth-logo">
+        <h2 class="auth-title" id="verify-title">Xác nhận tài khoản Mắt Mơ</h2>
+        <div class="auth-border-box">
+            <input type="email" placeholder="Email nhận mã" id="verify-email" readonly>
+            
+            <input type="text" placeholder="Nhập mã xác nhận" id="verify-code" 
+                   inputmode="numeric" pattern="[0-9]*" maxlength="6" style="text-align: center; font-size: 18px; letter-spacing: 4px;" required>
+            <p class="sub-text-hint">Mã xác nhận gồm 6 chữ số đã được gửi về email của bạn</p>
+            
+            <div class="auth-footer" style="margin-top: 20px;">
+                <button class="btn-link-pink" type="button">Gửi lại mã</button>
+                <button class="btn-white-rect" id="btn-verify-finish" style="margin: 0;">Hoàn tất</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mắt Mơ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop" >
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+    
+
+    <main class="container">
+        <!-- PHẦN 1: BÀI BÁO XU HƯỚNG -->
+        <section class="blog-section">
+            <h2 class="section-title title-blue">Các bài báo xu hướng</h2>
+            <div class="blog-grid">
+                <a href="blog-detail.html?id=bai-15" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/xh1.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Xu hướng</p>
+                        <h3 class="post-title">Gợi ý quà tặng kỷ niệm ngày cưới lãng mạn cho vợ </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-11" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/xh2.jpeg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Xu hướng</p>
+                        <h3 class="post-title">Bí quyết sở hữu đôi mắt sáng khỏe và rạng rỡ mỗi ngày </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-12" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/xh3.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Xu hướng</p>
+                        <h3 class="post-title">Phong cách Sporty Chic: 9 phụ kiện thời trang không thể thiếu </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-13"  class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/xh4.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Xu hướng</p>
+                        <h3 class="post-title">5 cách phối đồ all black nữ giúp nàng thêm cá tính và cuốn hút </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-14" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/xh5.jpeg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Xu hướng</p>
+                        <h3 class="post-title">Hốc mắt sâu nói lên điều gì? Nguyên nhân và góc nhìn nhân tướng học </h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- PHẦN 2: BÀI BÁO KIẾN THỨC -->
+        <section class="blog-section">
+            <h2 class="section-title title-white">Các bài báo kiến thức</h2>
+            <div class="blog-grid">
+                <a href="blog-detail.html?id=bai-1" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt1.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Tròng kính chống ánh sáng xanh: Công dụng, phân loại và giá tham khảo năm 2026  </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-2" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt2.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Hiểu đúng kết quả đo thị lực: Hướng dẫn đọc bảng kiểm tra mắt chi tiết </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-3" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt3.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Kính đeo bị rộng? Nguyên nhân và 5 cách khắc phục đơn giản tại nhà </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-4" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt4.jpeg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Khám phá 5 mẫu kính unisex thời thượng phù hợp với mọi phong cách </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-5" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt5.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Mắt kính bị lỏng? Hướng dẫn siết ốc và chỉnh kính đúng cách tại nhà </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-6" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt6.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Top 5 mẫu kính thể thao giúp bảo vệ mắt hiệu quả khi hoạt động ngoài trời </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-7" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt7.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Cầu kính là gì? Bí quyết chọn cầu kính phù hợp để đeo thoải mái cả ngày </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-8" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt8.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Kính lão và kính cận: Cách phân biệt và lựa chọn phù hợp </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-9" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt9.jpg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">9 bí quyết bảo quản kính đeo mắt luôn bền đẹp như mới </h3>
+                    </div>
+                </a>
+                <a href="blog-detail.html?id=bai-10" class="blog-card">
+                    <div class="card-thumb">
+                        <img src="images/kt10.jpeg" alt="Blog thumb">
+                    </div>
+                    <div class="card-content">
+                        <p class="tag">Hữu ích</p>
+                        <h3 class="post-title">Vì sao nên đeo kính bảo vệ mắt khi sử dụng máy tính thường xuyên? </h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid container">
+            <!-- HÀNG 1 -->
+            <div class="footer-column partners">
+                <h3>Các đối tác</h3>
+                <div class="partner-logos">
+                    <img src="images/cd.svg" alt="Dior">
+                    <img src="images/prada.svg" alt="Prada">
+                    <img src="images/crh.svg" alt="Chrome Hearts">
+                    <img src="images/gmt.svg" alt="Gentle Monster">
+                    <img src="images/rayban.svg" alt="Rayban">
+                    <img src="images/persol.svg" alt="Persol">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hotline</h3>
+                <p>1900 1999</p>
+                <p>(9:00 - 22:00)</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Email</h3>
+                <p>hello@matmoeyewear.com</p>
+            </div>
+
+            <!-- HÀNG 2 -->
+            <div class="footer-column introduction">
+                <h3>Giới thiệu</h3>
+                <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+            </div>
+
+            <div class="footer-column policies">
+                <h3>Chính sách</h3>
+                <ul class="policy-links">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- HÀNG CUỐI -->
+            <div class="footer-bottom">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/dang-nhap-dang-ky.js"></script>
+    <script src="js/chatbox.js"></script>
+
+</body>
+</html>

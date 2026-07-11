@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - Mắt Mơ Eyewear</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/thanh-toan.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+</head>
+<body class="checkout-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+ 
+    <main>
+    <div class="container checkout-grid">
+        
+        <section class="shipping-section">
+            <h2 class="section-title">Thông tin vận chuyển</h2>
+            <p class="subtitle">*Vui lòng nhập đầy đủ các thông tin bên dưới</p>
+
+            <form class="checkout-form" id="checkout-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label>Họ và tên *</label>
+                    <input type="text" id="fullname" placeholder="Họ và tên của bạn" required minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label>Số điện thoại *</label>
+                    <input type="tel" id="phone" placeholder="Số điện thoại của bạn (ví dụ: 0912345678)" required pattern="^(0[3|5|7|8|9])+([0-9]{8})$">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tỉnh/Thành phố *</label>
+                        <select name="province" id="province" required>
+                            <option value="" disabled selected>Chọn Tỉnh/Thành phố</option>
+                            <option value="Tuyên Quang">Tuyên Quang</option>
+                            <option value="Lào Cai">Lào Cai</option>
+                            <option value="Thái Nguyên">Thái Nguyên</option>
+                            <option value="Phú Thọ">Phú Thọ</option>
+                            <option value="Bắc Ninh">Bắc Ninh</option>
+                            <option value="Hưng Yên">Hưng Yên</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Ninh Bình">Ninh Bình</option>
+                            <option value="Quảng Trị">Quảng Trị</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                            <option value="Gia Lai">Gia Lai</option>
+                            <option value="Khánh Hòa">Khánh Hòa</option>
+                            <option value="Lâm Đồng">Lâm Đồng</option>
+                            <option value="Đắc Lắk">Đắk Lắk</option>
+                            <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Tây Ninh">Tây Ninh</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                            <option value="Vĩnh Long">Vĩnh Long</option>
+                            <option value="Đồng Tháp">Đồng Tháp</option>
+                            <option value="Cà Mau">Cà Mau</option>
+                            <option value="An Giang">An Giang</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Huế">Huế</option>
+                            <option value="Lai Châu">Lai Châu</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Sơn La">Sơn La</option>
+                            <option value="Lạng Sơn">Lạng Sơn</option>
+                            <option value="Quảng Ninh">Quảng Ninh</option>
+                            <option value="Thanh Hóa">Thanh Hóa</option>
+                            <option value="Nghệ An">Nghệ An</option>
+                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                            <option value="Cao Bằng">Cao Bằng</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Phường/Xã *</label>
+                        <input type="text" id="ward" placeholder="Tên Phường/Xã" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Số nhà, Đường *</label>
+                    <input type="text" id="address" placeholder="Ví dụ: 222 Hoàng Hoa Thám" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ghi chú</label>
+                    <textarea id="note" placeholder="Ghi chú đơn hàng (không bắt buộc)"></textarea>
+                </div>
+            </form>
+
+            <div class="payment-method-area">
+                <h3 class="method-title">Hình thức thanh toán</h3>
+                <div class="payment-flex-container">
+                    <img src="images/cod.svg" alt="Thanh toán COD" class="cod-payment-block-img">
+                    <p class="privacy-notice">
+                        Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn đặt hàng, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong chính sách bảo mật của chúng tôi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2 class="section-title">Sản phẩm đã chọn (0)</h2>
+            
+            <div class="order-items">
+                </div>
+
+            <div class="order-summary">
+                </div>
+            
+            <div class="btn-container">
+                <button class="btn-submit">Đặt hàng</button>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid container">
+        <div class="footer-column partners">
+            <h3>Các đối tác</h3>
+            <div class="partner-logos">
+                <img src="images/cd.svg" alt="Dior">
+                <img src="images/prada.svg" alt="Prada">
+                <img src="images/crh.svg" alt="Chrome Hearts">
+                <img src="images/gmt.svg" alt="Gentle Monster">
+                <img src="images/rayban.svg" alt="Rayban">
+                <img src="images/persol.svg" alt="Persol">
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Hotline</h3>
+            <p>1900 1999</p>
+            <p>(9:00 - 22:00)</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Email</h3>
+            <p>hello@matmoeyewear.com</p>
+        </div>
+
+        <div class="footer-column introduction">
+            <h3>Giới thiệu</h3>
+            <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+        </div>
+
+        <div class="footer-column policies">
+            <h3>Chính sách</h3>
+            <ul class="policy-links">
+                <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+        </div>
+    </div>
+</footer>
+
+<script src="js/chatbox.js"></script>
+
+<script>
+    // BƯỚC 1: Xác định nguồn dữ liệu ngay khi vừa nạp script (Hỗ trợ 3 luồng: Mua lại đơn hủy, Mua ngay, Giỏ hàng)
+    const rebuyData = localStorage.getItem("rebuy_items");
+    const buyNowData = localStorage.getItem("buy_now_item");
+    
+    let danhSachThanhToan = [];
+    window.isBuyNowProcess = false;
+    let isRebuyProcess = false;
+
+    if (rebuyData) {
+        danhSachThanhToan = JSON.parse(rebuyData);
+        isRebuyProcess = true;
+        localStorage.removeItem("rebuy_items");
+    } else if (buyNowData) {
+        danhSachThanhToan = [JSON.parse(buyNowData)];
+        window.isBuyNowProcess = true;
+        localStorage.removeItem("buy_now_item");
+    } else {
+        danhSachThanhToan = JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    // 1. Hàm hiển thị dữ liệu lên giao diện thanh toán
+    function renderCheckoutPage() {
+        const appliedVoucher = JSON.parse(localStorage.getItem('appliedVoucher')) || { percent: 0, code: "" };
+        
+        const orderSectionTitle = document.querySelector('.order-section .section-title');
+        const orderItemsContainer = document.querySelector('.order-items');
+        const orderSummaryContainer = document.querySelector('.order-summary');
+
+        if (!orderItemsContainer || !orderSummaryContainer) return;
+
+        if (danhSachThanhToan.length === 0) {
+            alert('Không có sản phẩm nào để thanh toán!');
+            window.location.href = 'gio-hang.html';
+            return;
+        }
+
+        if (orderSectionTitle) {
+            orderSectionTitle.innerText = `Sản phẩm đã chọn (${danhSachThanhToan.length})`;
+        }
+
+        let totalProductPrice = 0;
+
+        const productsHTML = danhSachThanhToan.map(item => {
+            const productImg = item.img || item.image || 'https://via.placeholder.com/80';
+            const productName = item.name || item.productName || 'Sản phẩm kính mắt';
+            const itemSubtotal = item.price * item.quantity;
+            totalProductPrice += itemSubtotal;
+
+            return `
+                <div class="product-group">
+                    <div class="product-main" style="display: flex; border: 0.5px solid #000181; padding: 10px; margin-bottom: 10px; gap: 15px; text-align: left;">
+                        <div class="product-img" style="background-image: url('${productImg}'); width: 80px; height: 60px; background-size: cover; background-position: center; border-radius: 4px;"></div>
+                        <div class="product-info" style="flex: 1; display: flex; justify-content: space-between; font-size: 14.5px; color: #000181;">
+                            <div class="name-price">
+                                <p class="product-name" style="margin: 0; font-weight: bold;">${productName}</p>
+                                <p class="product-price" style="margin: 5px 0 0 0;">${item.price.toLocaleString()}đ</p>
+                            </div>
+                            <p class="product-qty" style="margin: 0;">SL: ${item.quantity}</p>
+                        </div>
+                    </div>
+                    <div class="product-lens" style="display: flex; justify-content: space-between; padding-left: 95px; font-size: 13px; color: #000181; margin-bottom: 15px; text-align: left;">
+                        <div class="lens-info">
+                            <p style="margin: 0; font-style: italic; color: #666;">Khăn lau và hộp kính tặng kèm</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        orderItemsContainer.innerHTML = productsHTML;
+
+        const shippingFee = 30000; 
+        let discountAmount = (totalProductPrice * appliedVoucher.percent) / 100;
+        const finalTotal = totalProductPrice - discountAmount + shippingFee; 
+
+        orderSummaryContainer.innerHTML = `
+            <div class="summary-line" style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span>Tổng giá trị:</span>
+                <span class="val">${totalProductPrice.toLocaleString()}đ</span>
+            </div>
+            <div class="summary-line" style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span>Mã giảm giá:</span>
+                <span class="val" style="font-style: italic; color: ${appliedVoucher.percent > 0 ? 'red' : 'green'}; font-weight: ${appliedVoucher.percent > 0 ? 'bold' : 'normal'};">
+                    ${appliedVoucher.percent > 0 ? `${appliedVoucher.code} (-${appliedVoucher.percent}%)` : 'Không có'}
+                </span>
+            </div>
+            <div class="summary-line" style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span>Chi phí vận chuyển:</span>
+                <span class="val">${shippingFee.toLocaleString()}đ</span>
+            </div>
+            <div class="summary-line total" style="display: flex; justify-content: space-between; font-weight: bold; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                <span>Tổng cộng:</span>
+                <span class="red-text" style="color: #CB0000; font-size: 18px;">${finalTotal.toLocaleString()}đ</span>
+            </div>
+        `;
+    }
+
+    // 2. Chạy logic đặt hàng khi DOM đã sẵn sàng
+    document.addEventListener("DOMContentLoaded", function() {
+        renderCheckoutPage();
+
+        const submitBtn = document.querySelector('.btn-submit');
+        
+        if (submitBtn) {
+            submitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // --- BƯỚC 1: TRUY XUẤT CHÍNH XÁC CÁC ĐỐI TƯỢNG INPUT/SELECT TỪ FORM ---
+                const nameInputEl = document.getElementById('fullname');
+                const phoneInputEl = document.getElementById('phone');
+                const provinceSelectEl = document.getElementById('province');
+                const wardInputEl = document.getElementById('ward');
+                const addressInputEl = document.getElementById('address');
+                const noteTextareaEl = document.getElementById('note');
+
+                // --- BƯỚC 2: LẤY GIÁ TRỊ VÀ LÀM SẠCH KHOẢNG TRẮNG ---
+                const nameInput = nameInputEl ? nameInputEl.value.trim() : "";
+                const phoneInput = phoneInputEl ? phoneInputEl.value.trim() : "";
+                const provinceInput = provinceSelectEl ? provinceSelectEl.value : "";
+                const wardInput = wardInputEl ? wardInputEl.value.trim() : "";
+                const addressInput = addressInputEl ? addressInputEl.value.trim() : "";
+                const noteInput = noteTextareaEl ? noteTextareaEl.value.trim() : "";
+
+                // --- BƯỚC 3: KIỂM TRA RÀNG BUỘC DỮ LIỆU (VALIDATION) ---
+                
+                // 3.1. Kiểm tra bỏ trống trường bắt buộc (*)
+                if (!nameInput || !phoneInput || !provinceInput || !wardInput || !addressInput) {
+                    alert('Vui lòng điền đầy đủ tất cả các thông tin vận chuyển có dấu (*)!');
+                    return;
+                }
+
+                // 3.2. Kiểm tra định dạng Họ tên (Chỉ cho phép chữ và khoảng trắng)
+                    // 3.2. Kiểm tra định dạng Họ và tên (Chỉ chặn nếu chứa SỐ hoặc KÝ TỰ ĐẶC BIỆT, cho phép mọi chữ có dấu)
+                const specialCharsAndNumbers = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]/;
+                if (specialCharsAndNumbers.test(nameInput)) {
+                    alert('Họ và tên không hợp lệ! Vui lòng không nhập số hoặc các ký tự đặc biệt.');
+                    return;
+}
+
+                // 3.3. Kiểm tra định dạng Số điện thoại VN (10 chữ số, bắt đầu bằng các đầu số hiện hành)
+                const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
+                if (!phoneRegex.test(phoneInput)) {
+                    alert('Số điện thoại không đúng định dạng Việt Nam! (Ví dụ: 0912345678)');
+                    return;
+                }
+
+                // 3.4. Kiểm tra giỏ hàng trống trước khi lưu
+                if (danhSachThanhToan.length === 0) {
+                    alert('Giỏ hàng của bạn đang trống!');
+                    return;
+                }
+
+                // --- BƯỚC 4: XỬ LÝ LƯU ĐƠN HÀNG KHI ĐÃ HỢP LỆ ---
+                const appliedVoucher = JSON.parse(localStorage.getItem('appliedVoucher')) || { percent: 0, code: "" };
+
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let orderCode = 'MM-'; 
+                for (let i = 0; i < 5; i++) {
+                    orderCode += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+
+                let currentOrders = JSON.parse(localStorage.getItem('orders')) || [];
+
+                let totalProductPrice = danhSachThanhToan.reduce((sum, item) => {
+                    return sum + (item.price * item.quantity);
+                }, 0);
+                let discountAmount = (totalProductPrice * appliedVoucher.percent) / 100;
+                let totalFinalOrder = totalProductPrice - discountAmount + 30000;
+
+                const newOrder = {
+                    orderId: orderCode, 
+                    status: "Chờ xác nhận",
+                    shippingFee: 30000, 
+                    voucherApplied: appliedVoucher.code || "Không có",
+                    discountPercent: appliedVoucher.percent,
+                    totalAmount: totalFinalOrder,
+                    // Lưu trữ thông tin vận chuyển chi tiết khách hàng vừa điền vào đơn hàng
+                    shippingInfo: {
+                        fullname: nameInput,
+                        phone: phoneInput,
+                        province: provinceInput,
+                        ward: wardInput,
+                        addressDetail: addressInput,
+                        fullAddress: `${addressInput}, ${wardInput}, ${provinceInput}`,
+                        note: noteInput || "Không có ghi chú"
+                    },
+                    items: danhSachThanhToan.map(item => {
+                        const finalName = item.name || item.productName || 'Sản phẩm kính mắt';
+                        return {
+                            productName: finalName,
+                            category: finalName.includes("Tròng") ? "Tròng kính" : "Kính mắt",
+                            price: item.price,
+                            quantity: item.quantity,
+                            img: item.img || item.image || 'https://via.placeholder.com/80'
+                        };
+                    })
+                };
+
+                currentOrders.push(newOrder);
+                localStorage.setItem('orders', JSON.stringify(currentOrders));
+                
+                // Giải phóng bộ nhớ tạm
+                if (!window.isBuyNowProcess && !isRebuyProcess) {
+                    localStorage.removeItem('cart');
+                }
+                localStorage.removeItem('appliedVoucher'); 
+
+                // Hiển thị Popup Đặt hàng thành công
+                const popup = document.createElement('div');
+                popup.style.position = 'fixed';
+                popup.style.top = '0';
+                popup.style.left = '0';
+                popup.style.width = '100%';
+                popup.style.height = '100%';
+                popup.style.backgroundColor = 'rgba(0, 0, 0, 0.4)'; 
+                popup.style.display = 'flex';
+                popup.style.justifyContent = 'center';
+                popup.style.alignItems = 'center';
+                popup.style.zIndex = '9999';
+
+                popup.innerHTML = `
+                    <div style="background-color: #E2FCE1; padding: 40px 20px; text-align: center; width: 855px; max-width: 95%; min-height: 385px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0px 4px 20px rgba(0,0,0,0.08); font-family: 'Mona Sans', sans-serif; position: relative; border-radius: 12px;">
+                        <img src="images/logo.png" alt="Mắt Mơ Eyewear" style="width: 100px; height: auto; margin-bottom: 20px;" onerror="this.style.display='none'">
+                        <h3 style="color: #000181; font-size: 26px; font-weight: bold; margin: 0 0 15px 0;">Đặt hàng thành công!</h3>
+                        <p style="color: #000181; font-size: 18px; font-style: italic; margin: 0 0 20px 0; line-height: 1.4;">
+                            Xin vui lòng chờ Mắt Mơ đóng gói và gửi đến<br>tận tay cho bạn trong 3-4 ngày tới nhé !!!
+                        </p>
+                        <div style="margin-bottom: 25px; font-size: 14px; color: #000181;">
+                            <span style="opacity: 0.8;">Mã đơn hàng:</span> 
+                            <strong style="color: #CB0000; font-size: 16px; letter-spacing: 0.5px; margin-right: 15px;">${orderCode}</strong>
+                            | 
+                            <a href="https://i.ghtk.vn/" target="_blank" style="color: #000181; font-weight: bold; text-decoration: underline; margin-left: 15px;">Xem hành trình đơn</a>
+                        </div>
+                        <button id="btn-close-popup" style="background: #000181; color: white; border: none; padding: 10px 30px; border-radius: 20px; cursor: pointer; font-size: 14px; font-weight: bold;">Tiếp tục mua sắm</button>
+                    </div>
+                `;
+
+                document.body.appendChild(popup);
+
+                document.getElementById('btn-close-popup').addEventListener('click', () => {
+                    popup.remove();
+                    window.location.href = 'trang-ca-nhan.html'; 
+                });
+            });
+        }
+    });
+</script>
+
+    <script src="js/dang-nhap-dang-ky.js"></script>
+
+</body>
+</html>

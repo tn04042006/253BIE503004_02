@@ -1,0 +1,46 @@
+body.policy-page {
+    background: linear-gradient(
+        180deg,
+        #E9B2EB 0%,    /* Hồng */
+        #A5C9FF 25%,   /* Xanh */
+        #E9B2EB 50%,   /* Hồng */
+        #A5C9FF 75%,   /* Xanh */
+        #E9B2EB 100%   /* Hồng */
+    );
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.policy-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.policy-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.policy-content {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--primary-blue);
+    white-space: pre-line;
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.policy-section ul {
+    padding-left: 25px;
+}

@@ -1,0 +1,237 @@
+/* Import fonts (giả định font hệ thống nếu không có file font) */
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,400;1,400&display=swap');
+
+/* Variables từ thiết kế */
+:root {
+    --primary-blue: #000181;
+    --red-alert: #CB0000;
+    --input-border: 0.5px solid #000181;
+    --bg-gradient: linear-gradient(270deg, rgba(232, 160, 232, 0.7) 25.96%, rgba(150, 231, 255, 0.7) 50.96%, #D0FFA4 87.02%);
+    --btn-bg: #EEFFDE;
+}
+
+body {
+    background: var(--bg-gradient);
+    overflow-x: hidden;
+}
+
+/* Checkout Page Grid */
+.checkout-page {
+    padding-top: 100px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.section-title {
+    font-family: 'Momo Trust Display';
+    color: var(--primary-blue);
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-family: 'Momo Signature';
+    font-size: 10px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    height: 33px;
+    border: var(--input-border);
+    background: transparent;
+    padding: 0 10px;
+    font-family: 'Mona Sans';
+    font-style: italic;
+    font-size: 11px;
+}
+
+.form-group textarea {
+    height: 60px;
+    padding-top: 5px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.privacy-notice {
+    font-size: 10px;
+    color: var(--primary-blue);
+    text-align: justify;
+    line-height: 1.3;
+    margin-top: 20px;
+}
+
+/* Order Styles */
+.order-items {
+    margin-bottom: 30px;
+}
+
+.product-item {
+    display: flex;
+    border: var(--input-border);
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.product-img {
+    width: 80px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    color: var(--primary-blue);
+}
+
+.sub-item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 95px;
+    font-size: 13px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+/* Summary */
+.order-summary {
+    border-top: 1px solid var(--primary-blue);
+    padding-top: 20px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-blue);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.summary-line.total {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.red-text {
+    color: var(--red-alert);
+}
+
+/* Button */
+.btn-submit {
+    width: 100%;
+    height: 40px;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 8px;
+    color: var(--primary-blue);
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    filter: brightness(0.9);
+}
+
+/* Tùy chỉnh giao diện select */
+select {
+    appearance: none; /* Bỏ icon mặc định của trình duyệt */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000181' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px !important;
+    cursor: pointer;
+    color: #000181;
+}
+
+/* Hiệu ứng khi hover vào các option (tùy trình duyệt) */
+select option {
+    background-color: #fff;
+    color: #000181;
+    font-family: 'Mona Sans', sans-serif;
+    font-style: normal;
+}
+/* Container chính chứa tiêu đề */
+.payment-method-area {
+    width: 100%;
+    max-width: 850px; /* Thử điều chỉnh độ rộng cho vừa với layout chung */
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Tiêu đề "Hình thức thanh toán" căn giữa */
+.method-title {
+    font-family: 'Mona Sans', sans-serif; /* Hoặc font hệ thống của bạn */
+    color: var(--primary-blue);
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Căn hai khối nằm ngang hàng và tự động căn giữa theo chiều dọc */
+.payment-flex-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 40px; /* Khoảng cách giữa ảnh khối COD và đoạn chữ */
+}
+
+/* Định dạng kích thước cho khối ảnh SVG COD */
+.cod-payment-block-img {
+    width: 150px; /* Điều chỉnh chiều rộng khối trắng theo ý bạn */
+    height: auto;  /* Giữ nguyên tỷ lệ ảnh */
+    flex-shrink: 0; /* Ngăn không cho ảnh bị bóp méo khi thu nhỏ màn hình */
+}
+
+/* Định dạng đoạn văn bản bên phải */
+.payment-flex-container .privacy-notice {
+    font-size: 14.5px;
+    color: var(--primary-blue);
+    line-height: 1.5;
+    text-align: left; /* Căn trái dòng chữ giống hệt ảnh mẫu */
+    margin: 0;
+    max-width: 440px; /* Giới hạn độ rộng để chữ tự xuống hàng đẹp mắt */
+}
+
+/* Giao diện responsive trên điện thoại */
+@media (max-width: 650px) {
+    .payment-flex-container {
+        flex-direction: column; /* Xếp chồng hàng dọc trên điện thoại */
+        gap: 20px;
+        text-align: center;
+    }
+    .payment-flex-container .privacy-notice {
+        text-align: justify; /* Trên mobile căn đều hai bên nhìn sẽ gọn hơn */
+    }
+}

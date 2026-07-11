@@ -1,0 +1,80 @@
+/* BACKGROUND TOÀN TRANG: Dải màu Gradient xanh dương chuyển sắc theo ảnh */
+.gong-kinh-page {
+    background: linear-gradient(180deg, 
+        rgba(150, 231, 255, 0.7) 3%,     /* Mã màu #96E7FF, Opacity 70% */
+        rgba(189, 204, 240, 1.0) 9%,     /* Mã màu #BDCCF0, Opacity 100% */
+        rgba(54, 110, 235, 0.8) 21%,     /* Mã màu #366EEB, Opacity 80% */
+        rgba(150, 231, 255, 0.7) 33%,    /* Mã màu #96E7FF, Opacity 70% */
+        rgba(150, 231, 255, 0.83) 46%,   /* Mã màu #96E7FF, Opacity 83% */
+        rgba(54, 110, 235, 0.7) 58%,     /* Mã màu #366EEB, Opacity 70% */
+        rgba(189, 204, 240, 0.81) 72%,   /* Mã màu #BDCCF0, Opacity 81% */
+        rgba(150, 231, 255, 0.7) 86%,    /* Mã màu #96E7FF, Opacity 70% */
+        rgba(54, 110, 235, 1.0) 97%      /* Mã màu #366EEB, Opacity 100% */
+    );
+    min-height: 100vh;
+    overflow-x: hidden; /* Chặn hoàn toàn cuộn ngang của body */
+}
+
+/* 1. ĐIỀU CHỈNH KHOẢNG CÁCH GIỮA SIDEBAR VÀ BANNER */
+.shop-layout {
+    display: grid;
+    /* Cột 1 là Sidebar (220px), Cột 2 là Banner */
+    grid-template-columns: 220px 1fr; 
+    /* Tăng column-gap lên để banner dịch sang phải, cách xa bộ lọc (ví dụ 60px) */
+    column-gap: 100px; 
+    row-gap: 30px;
+    margin-top: 30px;
+}
+
+/* 2. LÀM CHO 3 ẢNH CHỒNG SÁT NHAU KHÔNG KẼ HỞ */
+.product-hero-banner {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%; 
+    /* Dùng flex-direction column để ép ảnh xếp hàng dọc */
+    display: flex;
+    flex-direction: column; 
+}
+
+.product-hero-banner img {
+    width: 100%;
+    height: auto;
+    /* QUAN TRỌNG: display: block để loại bỏ khoảng hở mặc định của thẻ img */
+    display: block; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Các phần khác giữ nguyên như cũ để đảm bảo bố cục */
+.main-content {
+    display: contents; 
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.products-grid {
+    grid-column: 1 / -1; 
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+/* 5. RESPONSIVE: Khi màn hình nhỏ lại */
+@media (max-width: 1200px) {
+    .products-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .shop-layout { 
+        display: flex; 
+        flex-direction: column; 
+    }
+    .products-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}

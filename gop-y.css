@@ -1,0 +1,111 @@
+/* Container chính của cả Form */
+.feedback-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.feedback-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 720px;
+    background: linear-gradient(180deg, #E8A0FF 0.48%, rgba(0, 1, 129, 0.7) 39.9%, rgba(0, 1, 129, 0.7) 53.37%, rgba(208, 255, 164, 0.9) 100%);
+    border-radius: 20px; /* Bo nhẹ góc khung lớn nếu muốn */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Phần ảnh Header nửa trên */
+.feedback-header {
+    width: 100%;
+    position: relative;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Icon mấy quả đào nhỏ nằm đè lên viền trắng */
+.mid-icon {
+    position: absolute;
+    bottom: -30px; /* Đẩy xuống giữa viền */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Điều chỉnh kích thước icon */
+    z-index: 5;
+}
+
+/* Khu vực Form */
+.feedback-form {
+    width: 100%;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    max-width: 1083px;
+}
+
+/* Style chung cho ô nhập và textarea */
+.input-group textarea, 
+.input-group input {
+    width: 100%;
+    background: #FFF9F9;
+    border: 1px solid #656565;
+    box-shadow: 0px 4px 18.9px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    padding: 20px 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Placeholder màu xám nhạt */
+.input-group textarea::placeholder,
+.input-group input::placeholder {
+    color: #ADA9A9;
+}
+
+/* Chiều cao riêng cho textarea */
+.input-group textarea {
+    height: 194px;
+    resize: none; /* Không cho kéo giãn ô */
+}
+
+/* Chiều cao riêng cho input SĐT */
+.input-group input {
+    height: 60px;
+}
+
+/* Nút bấm Gửi đi */
+.btn-submit {
+    margin-top: 20px;
+    width: 278px;
+    height: 79px;
+    background: #E8DEF8;
+    border: none;
+    border-radius: 10px; /* Hoặc 4px như Figma bạn ghi */
+    font-size: 20px;
+    font-weight: bold;
+    color: #000181;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-submit:hover {
+    background: #d8c9f0;
+    transform: scale(1.05);
+}

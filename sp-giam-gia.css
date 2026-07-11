@@ -1,0 +1,35 @@
+/* ==========================================================================
+   SALE PAGE CUSTOM STYLES
+   ========================================================================== */
+
+/* 1. Background đặc trưng của trang Sale */
+.sale-page-wrapper {
+    background: linear-gradient(180deg, #D0FFA4 3.37%, #E8A0E8 24.52%, rgba(150, 231, 255, 0.7) 41.35%, #D0FFA4 58.65%, rgba(232, 160, 232, 0.6) 75%, rgba(225, 188, 212, 0.719298) 75.01%, rgba(150, 231, 255, 0.719298) 94.23%);
+}
+
+/* 2. Banner */
+.hero-banner {
+    width: 100vw; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* Xóa bo góc để tạo cảm giác tràn viền mượt mà */
+}
+
+
+
+/* 5. Responsive lưới 4 cột */
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

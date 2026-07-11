@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gọng kính - Mắt Mơ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sp-gong-kinh.css">
+    <link rel="stylesheet" href="css/dang-nhap-dang-ky.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+
+    <script src="js/search.js"></script>
+</head>
+<body class="gong-kinh-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Mắt Mơ" class="logo"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                
+                <li class="dropdown">
+                    <a href="sp-tat-ca.html">Sản phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sp-gong-kinh.html">Gọng kính</a></li>
+                        <li><a href="sp-trong-kinh.html">Tròng kính</a></li>
+                        <li><a href="sp-dang-mat.html">Hình dáng mặt</a></li>
+                        <li><a href="sp-giam-gia.html">Giảm giá</a></li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-mobile"><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                
+                <li class="dropdown hide-on-mobile">
+                    <a href="#">Chính sách</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                    </ul>
+                </li>
+                
+                <li class="hide-on-mobile"><a href="blog.html">Blog</a></li>
+
+                <li class="dropdown show-on-mobile hide-on-desktop">
+                    <a href="#">Xem thêm <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                        <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                        <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                        <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="header-icons">
+                <div class="search-box">
+                    <img src="images/search-icon.svg" alt="Search" id="search-trigger" class="search-icon-btn">
+                    
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                            <img src="images/search-icon.svg" alt="Search" class="search-inside-icon">
+                        </div>
+                        
+                        <div class="search-suggestions">
+                            <p class="suggestion-title">Gợi ý</p>
+                            <div class="suggestion-tags">
+                                <a href="sp-gong-kinh.html">Gọng kính</a>
+                                <a href="sp-trong-kinh.html">Tròng kính</a>
+                                <a href="sp-tat-ca.html">Kính mắt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="gio-hang.html"><img src="images/cart-icon.svg" alt="Cart"></a>
+                <div class="header-user-wrapper dropdown">
+                    <a href="#" id="user-icon-link">
+                        <img src="images/user.svg" alt="User" class="user-icon" style="display: block;">
+                    </a>
+                    <div class="dropdown-menu user-dropdown-custom" id="userDropdown"></div>
+                </div>            
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="shop-layout">
+            <aside class="sidebar">
+                <div class="filter-group">
+                    <h3>KIỂU DÁNG GỌNG</h3>
+                    <label><input type="checkbox" name="kieu_dang" value="Tròn"> Tròn</label>
+                    <label><input type="checkbox" name="kieu_dang" value="Vuông"> Vuông</label>
+                    <label><input type="checkbox" name="kieu_dang" value="Chữ nhật"> Chữ nhật</label>
+                    <label><input type="checkbox" name="kieu_dang" value="Oval"> Oval</label>
+                </div>
+                <div class="filter-group">
+                    <h3>KHOẢNG GIÁ</h3>
+                    <label><input type="radio" name="khoang_gia" value="all" checked> Tất cả</label>
+                    <label><input type="radio" name="khoang_gia" value="<300k"> &lt; 300k</label>
+                    <label><input type="radio" name="khoang_gia" value="300k-500k"> 300k - 500k</label>
+                    <label><input type="radio" name="khoang_gia" value="500k-1000k"> 500k - 1000k</label>
+                    <label><input type="radio" name="khoang_gia" value=">1000k"> &gt; 1000k</label>
+                </div>
+                <div class="filter-group">
+                    <h3>LOẠI TRÒNG</h3>
+                    <label><input type="checkbox" name="loai_trong" value="Chống tia UV"> Chống tia UV</label>
+                    <label><input type="checkbox" name="loai_trong" value="Đổi màu"> Đổi màu</label>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <section class="product-hero-banner">
+                    <img src="images/dang-gong.png" alt="Các loại Gọng kính">
+                    <img src="images/dang-gong1.png" alt="Các loại Gọng kính">
+                    <img src="images/dang-gong2.png" alt="Các loại Gọng kính">
+                </section>
+
+                <div class="products-grid" id="products-list">
+                    </div>
+                
+            </div>
+        </div>
+        <div class="pagination" id="pagination-ctrl"></div>
+
+    </main>
+
+    
+    
+    <footer>
+        <div class="footer-grid container">
+            <!-- HÀNG 1 -->
+            <div class="footer-column partners">
+                <h3>Các đối tác</h3>
+                <div class="partner-logos">
+                    <img src="images/cd.svg" alt="Dior">
+                    <img src="images/prada.svg" alt="Prada">
+                    <img src="images/crh.svg" alt="Chrome Hearts">
+                    <img src="images/gmt.svg" alt="Gentle Monster">
+                    <img src="images/rayban.svg" alt="Rayban">
+                    <img src="images/persol.svg" alt="Persol">
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hotline</h3>
+                <p>1900 1999</p>
+                <p>(9:00 - 22:00)</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Email</h3>
+                <p>hello@matmoeyewear.com</p>
+            </div>
+
+            <!-- HÀNG 2 -->
+            <div class="footer-column introduction">
+                <h3>Giới thiệu</h3>
+                <p>Cửa hàng chuyên cung cấp các loại mắt kính – gọng kính với mức giá phù hợp với tâm lý khách hàng và có tính cạnh tranh cao. Mắt mơ luôn luôn mong muốn làm hài lòng tất cả khách hàng.</p>
+            </div>
+
+            <div class="footer-column policies">
+                <h3>Chính sách</h3>
+                <ul class="policy-links">
+                    <li><a href="csbaomat.html">Chính sách bảo mật</a></li>
+                    <li><a href="csbaohanh.html">Chính sách bảo hành</a></li>
+                    <li><a href="csthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="csvanchuyen.html">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+
+            <!-- HÀNG CUỐI -->
+            <div class="footer-bottom">
+                CÔNG TY CỔ PHẦN CUNG CẤP MẮT KÍNH - GỌNG KÍNH MẮT MƠ
+            </div>
+        </div>
+    </footer>
+    <div id="vrPrivacyModal" class="vr-modal">
+        <div class="vr-modal-content">
+            <button class="vr-close-x" onclick="closeVRModal()">✕</button>
+
+            <div id="vrStepTerms" class="vr-step-container active">
+                <div class="vr-modal-left">
+                    <img src="images/face.png" alt="VR Try-on" class="vr-left-img">
+                </div>
+
+                <div class="vr-modal-right">
+                    <h2 class="vr-title">Chúng tôi chỉ phát hiện các điểm chung trên khuôn mặt bạn và hết!</h2>
+                    
+                    <div class="vr-features">
+                        <div class="vr-feature-item">
+                            <span><img src="images/tick.svg"></span>
+                            <p>Không nhận dạng hay định danh khuôn mặt</p>
+                        </div>
+                        <div class="vr-feature-item">
+                            <span><img src="images/tick.svg"></span>
+                            <p>Không lưu trữ hoặc chia sẻ hình ảnh của bạn</p>
+                        </div>
+                    </div>
+
+                    <div class="vr-action-buttons">
+                        <button class="vr-btn vr-btn-decline" onclick="closeVRModal()">Tôi không đồng ý</button>
+                        <button class="vr-btn vr-btn-accept" onclick="handleVRAccept()">Tôi hoàn toàn đồng ý</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="vrStepLive" class="vr-step-container">
+                <div class="vr-live-view">
+                    <img src="images/tryon.png" alt="VR Live View" class="vr-placeholder-img">
+                    <div class="vr-live-overlay-text">Đang kết nối hệ thống thử kính... 🕶️</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/products.js"></script>
+    <script src="js/dang-nhap-dang-ky.js"></script>
+    <script src="js/chatbox.js"></script>
+
+
+</body>
+</html>

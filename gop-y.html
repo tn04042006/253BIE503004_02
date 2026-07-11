@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gop-y.css">
+</head>
+<body class="about-us-page">
+
+<section class="feedback-section">
+    <div class="feedback-container">
+        <div class="feedback-header">
+            <img src="images/gop-y.png" alt="Header Feedback" class="header-img">
+        </div>
+
+        <form class="feedback-form" id="feedbackForm">
+            <div class="input-group">
+                <textarea required placeholder="Lời nhắn nhủ đến tụi mình ........................................."></textarea>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="phoneInput" required placeholder="Cho tụi mình SĐT liên hệ nhé: .........................................">
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Gửi đi ngay
+            </button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        // 1. Chặn sự kiện submit mặc định để kiểm tra dữ liệu trước
+        event.preventDefault();
+
+        // 2. Lấy giá trị SĐT người dùng nhập vào và xóa khoảng trắng ở 2 đầu (nếu có)
+        const phoneValue = document.getElementById('phoneInput').value.trim();
+
+        // 3. Biểu thức chính quy (Regex) check SĐT Việt Nam: 
+        // Bắt đầu bằng 0, theo sau là 3, 5, 7, 8, 9 và có đủ 10 chữ số.
+        const phoneRegex = /^(03|05|07|08|09)\d{8}$/;
+
+        // 4. Tiến hành kiểm tra
+        if (!phoneRegex.test(phoneValue)) {
+            alert("Số điện thoại không hợp lệ rồi nè! Bạn kiểm tra lại giúp tụi mình nhé (Ví dụ: 0912345678).");
+            return; // Dừng hàm tại đây, không chạy đoạn code gửi thành công ở dưới
+        }
+
+        alert("Cảm ơn bạn! Ý kiến của bạn đã được gửi thành công. Đang quay lại trang chủ...");
+
+        setTimeout(function() {
+            window.location.href = "index.html"; 
+        }, 1500); 
+    });
+</script>
+</body>
+</html>
