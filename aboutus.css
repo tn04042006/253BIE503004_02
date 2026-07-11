@@ -4,10 +4,6 @@
     font-family: 'Momo Signature';
     src: url('../fonts/Momo-Signature.ttf');
 }
-@font-face {
-    font-family: 'Momo Trust Display';
-    src: url('../fonts/Momo-Trust-Display.ttf');
-}
 
 .about-us-page {
     background: linear-gradient(180deg, rgba(150, 231, 255, 1) 0%, rgba(97, 150, 216, 1) 11.06%, #3D5EBD 23.56%, rgba(0, 1, 144, 1) 40.38%, rgba(61, 94, 189, 1) 46.15%, rgba(97, 150, 216, 1) 77.4%, rgba(150, 231, 255, 1) 93.27%);
